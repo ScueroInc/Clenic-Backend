@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>MyE.Business.Component</AssemblyName>
+    <RootNamespace>MyE.Business.Component</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyE.Data\MyE.Data.csproj" />
+  </ItemGroup>
+
+</Project>
