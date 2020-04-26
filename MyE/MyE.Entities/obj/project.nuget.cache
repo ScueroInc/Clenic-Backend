@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E2qgktXGthv8/QiBDid0aniIHvVmmTmSe+WmNgMfvvYjLHGLZRCRFqDAh8z9GZoZm9mFMfmavXmQfEuaWlrWKQ==",
+  "dgSpecHash": "wO0tcXN5X4MSGI39DGqFRA0EmXSqYNliEubDWldOj1AbmFk+EcbNJKN7BxN4jnaQv44qHV9PH4EdSArWgCGDlg==",
   "success": true,
-  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.Entities\\MyE.Entities.csproj",
+  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ryzen\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Ryzen\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tw3PS/jM4BUkCG/dhgHOK++1zV2kuFWS0KXxx72NKIIp2+SBYX8Kmzg3F/d9VKU1ITF5zo3Tq9+/6Y1o4m/DwA==",
+  "dgSpecHash": "kRxMrynJ3uz7tw0NXV+83k/x1I3QL7aqRyiswd6gwQg0r/neEWfMk7LZvGfXWYA8iwFRr2C1WX9d7TCN1g0nOw==",
   "success": true,
-  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj",
+  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ryzen\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512",
     "C:\\Users\\Ryzen\\.nuget\\packages\\htmlagilitypack\\1.11.23\\htmlagilitypack.1.11.23.nupkg.sha512",

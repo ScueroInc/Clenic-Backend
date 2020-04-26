@@ -5302,11 +5302,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.Data\\MyE.Data.csproj",
+      "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
       "projectName": "MyE.Data",
-      "projectPath": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.Data\\MyE.Data.csproj",
+      "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
       "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-      "outputPath": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.Data\\obj\\",
+      "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5325,8 +5325,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
-              "projectPath": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.Entities\\MyE.Entities.csproj"
+            "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+              "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
             }
           }
         }

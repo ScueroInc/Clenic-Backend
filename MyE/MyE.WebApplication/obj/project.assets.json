@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
+      "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
       "projectName": "MyE.WebApplication",
-      "projectPath": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
+      "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
       "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-      "outputPath": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.WebApplication\\obj\\",
+      "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

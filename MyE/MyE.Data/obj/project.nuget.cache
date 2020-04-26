@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CRpQVK0UPXKqTKYedXi4aEE4pEzM1SFe9JDEqzFzw2uTt90FpcFfqOBLczmDW3hVd+/YtzkvhgvN8pgpoS8/xg==",
+  "dgSpecHash": "1tgXio2GjUYj+Sxdx1tdXyNRcOJVmZRuynPxAVgszwZ3fLph+DMFRulaXS4DVupq/X1XqpRe7/waoQ/iLtnjVw==",
   "success": true,
-  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\MyE\\MyE.Data\\MyE.Data.csproj",
+  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ryzen\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512",
     "C:\\Users\\Ryzen\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
