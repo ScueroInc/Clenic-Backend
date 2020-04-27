@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace MyE.Business.Entities.Response
 {
-    public class IngenieroResponse
+    public class IngenieroRes
     {
         [Display(Name = "id")]
         [JsonProperty(PropertyName = "id")]
@@ -36,7 +36,7 @@ namespace MyE.Business.Entities.Response
 
 
 
-        public IngenieroResponse(Persona objIngeniero)
+        public IngenieroRes(Persona objIngeniero)
         {
             this.IngenieroId = objIngeniero.Empleado.EmpleadoId;
             this.Nombre = objIngeniero.Npersona;
@@ -45,6 +45,6 @@ namespace MyE.Business.Entities.Response
             this.Correo = objIngeniero.Empleado.Correo;
             this.Dni = objIngeniero.Empleado.Dni;
         }
-        public IngenieroResponse() { }
+        public IngenieroRes() { }
     }
 }

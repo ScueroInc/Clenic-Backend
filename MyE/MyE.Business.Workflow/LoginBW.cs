@@ -18,8 +18,8 @@ namespace MyE.Business.Workflow
             context = new SqlContext();
         }
 
-        public UsuarioResponse Loguearse(string username,string psw) {
-            var response = default(UsuarioResponse);
+        public UsuarioRes Loguearse(string username,string psw) {
+            var response = default(UsuarioRes);
             try
             {
                 var usuario = context.Usuario
@@ -34,7 +34,7 @@ namespace MyE.Business.Workflow
                 
                 usuario.Token = SecurityHelper.GenerateToken(usuario);
                 context.SaveChanges();
-                response = new UsuarioResponse(usuario, true);               
+                response = new UsuarioRes(usuario, true);               
             }
             catch (Exception ex){
                 throw ex;

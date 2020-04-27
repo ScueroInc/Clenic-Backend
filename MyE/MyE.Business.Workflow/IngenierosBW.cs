@@ -15,8 +15,8 @@ namespace MyE.Business.Workflow
             context = new SqlContext();
         }
 
-        public List<IngenieroResponse> ListarIngenieros() {
-            var response = default(List<IngenieroResponse>);      
+        public List<IngenieroRes> ListarIngenieros() {
+            var response = default(List<IngenieroRes>);      
             try
             {                
                 var ingenieros = context.Usuario
@@ -24,8 +24,9 @@ namespace MyE.Business.Workflow
                                         .ThenInclude(e=>e.Empleado)
                                         .Where(e=>e.Persona.Empleado !=null)
                                         .Where(e=>e.Perfil=="I")
-                                        .Select(e=>new IngenieroResponse(e.Persona))
+                                        .Select(e=>new IngenieroRes(e.Persona))
                                         .ToList();
+                if (ingenieros is null) throw new ExceptionHelper("No se encontraron ingenieros");
                 response = ingenieros;                  
             }
             catch (Exception ex){
@@ -34,9 +35,9 @@ namespace MyE.Business.Workflow
             return response;
         }
 
-        public IngenieroResponse ObtenerIngeniero(string usuarioId)
+        public IngenieroRes ObtenerIngeniero(string usuarioId)
         {
-            var response = default(IngenieroResponse);
+            var response = default(IngenieroRes);
             try
             {
                 var ingeniero = context.Usuario.Include(e => e.Persona).ThenInclude(e => e.Empleado).SingleOrDefault(e => e.UsuarioId == usuarioId);
@@ -44,7 +45,7 @@ namespace MyE.Business.Workflow
                 //var ingeniero=persona.ThenInclude(e => e.Empleado)
 
                 if (ingeniero.Persona.Empleado is null) throw new ExceptionHelper("No se encontro registros");
-                response = new IngenieroResponse
+                response = new IngenieroRes
                 {
                     Correo = ingeniero.Persona.Empleado.Correo,
                     Direccion = ingeniero.Persona.Empleado.Tdireccion,

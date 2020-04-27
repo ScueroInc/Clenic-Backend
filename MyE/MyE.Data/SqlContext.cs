@@ -373,6 +373,10 @@ namespace MyE.Data
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Estado)
+                    .HasMaxLength(1)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.FechaAtencion).HasColumnType("date");
 
                 entity.Property(e => e.FechaEjecucion).HasColumnType("date");

@@ -28,7 +28,7 @@ namespace MyE.Presentation.WebApi.Controllers
         }
 
         [NonAction]
-        protected UsuarioResponse Login(LoginRequest model)
+        protected UsuarioRes Login(LoginRequest model)
         {
             var res = objBusinessLogin.Loguearse(model.Username, model.Password);
             HttpContext.Session.Set("USUARIO", ConvertHelper.ToByteArray(JsonConvert.SerializeObject(res)));
@@ -44,21 +44,21 @@ namespace MyE.Presentation.WebApi.Controllers
             if (HttpContext.Session.TryGetValue("USUARIO", out bUsuario))
             {
                 var jsonUsuario = ConvertHelper.FromByteArray<string>(bUsuario);
-                var usuario = JsonConvert.DeserializeObject<UsuarioResponse>(jsonUsuario);
+                var usuario = JsonConvert.DeserializeObject<UsuarioRes>(jsonUsuario);
                 isAuth = true;//usuario.Perfil == ConstantsHelper.USUARIO_PERFIL_ADMINISTRADOR;
             }
             return isAuth;
         }
 
         [NonAction]
-        protected UsuarioResponse GetUsuario()
+        protected UsuarioRes GetUsuario()
         {
             if (!IsAuthorized()) return null;
 
             var bUsuario = default(byte[]);
             HttpContext.Session.TryGetValue("USUARIO", out bUsuario);
             var jsonUsuario = ConvertHelper.FromByteArray<string>(bUsuario);
-            var usuario = JsonConvert.DeserializeObject<UsuarioResponse>(jsonUsuario);
+            var usuario = JsonConvert.DeserializeObject<UsuarioRes>(jsonUsuario);
             return usuario;
         }
         
