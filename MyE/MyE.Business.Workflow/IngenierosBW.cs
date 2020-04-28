@@ -41,9 +41,7 @@ namespace MyE.Business.Workflow
             try
             {
                 var ingeniero = context.Usuario.Include(e => e.Persona).ThenInclude(e => e.Empleado).SingleOrDefault(e => e.UsuarioId == usuarioId);
-                //if (persona.Persona is null) throw new ExceptionHelper("No se encontro registros del usuario ingresado");
-                //var ingeniero=persona.ThenInclude(e => e.Empleado)
-
+                
                 if (ingeniero.Persona.Empleado is null) throw new ExceptionHelper("No se encontro registros");
                 response = new IngenieroRes
                 {

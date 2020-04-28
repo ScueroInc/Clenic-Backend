@@ -59,12 +59,7 @@ namespace MyE.Business.Workflow
                 };
                 context.Reporte.Add(objReporte);
                 context.SaveChanges();
-                respuesta = true;
-                //if (usuario == null)
-                //    throw new ExceptionHelper("El usuario no existe.");
-                //if (usuario.Token!= tokenAvalidar)
-                //    throw new ExceptionHelper("Sesion invalida, comuniquese con un administrador");
-                //response = true;
+                respuesta = true;               
             }
             catch (Exception ex)
             {
@@ -72,11 +67,6 @@ namespace MyE.Business.Workflow
             }
             return respuesta;
         }
-
-
-
-
-
     }
    
 }

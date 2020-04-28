@@ -52,8 +52,7 @@ namespace MyE.Presentation.WebApi.Controllers
         [HttpPost]
         [Route("insertreporte")]
         public IActionResult RegistrarReporte(ReporteRqst objReporte)
-        {
-                     
+        {                     
             var response = default(IActionResult);
             try
             {
