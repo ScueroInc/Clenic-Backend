@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {}
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {}
   },
   "projects": {
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
+        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
         "projectName": "MyE.Entities",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
+        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
         "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\obj\\",
+        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

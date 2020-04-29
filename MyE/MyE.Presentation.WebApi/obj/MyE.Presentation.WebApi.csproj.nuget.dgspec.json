@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj": {}
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj",
+        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj",
         "projectName": "MyE.Business.Component",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj",
+        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj",
         "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\obj\\",
+        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
+        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
         "projectName": "MyE.Business.Entities",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
+        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
         "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Entities\\obj\\",
+        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -103,11 +103,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
               },
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
               }
             }
           }
@@ -145,14 +145,14 @@
         }
       }
     },
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj": {
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
+        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
         "projectName": "MyE.Business.Workflow",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
+        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
         "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Workflow\\obj\\",
+        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -171,17 +171,17 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
               },
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj"
               },
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
               },
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
               }
             }
           }
@@ -223,14 +223,14 @@
         }
       }
     },
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
+        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
         "projectName": "MyE.Data",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
+        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
         "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Data\\obj\\",
+        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -249,8 +249,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
               }
             }
           }
@@ -288,14 +288,14 @@
         }
       }
     },
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
+        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
         "projectName": "MyE.Entities",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
+        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
         "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Entities\\obj\\",
+        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -355,14 +355,14 @@
         }
       }
     },
-    "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj": {
+    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj",
+        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj",
         "projectName": "MyE.Presentation.WebApi",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj",
+        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj",
         "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Presentation.WebApi\\obj\\",
+        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Presentation.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -381,14 +381,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
               },
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj"
               },
-              "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj"
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj"
               }
             }
           }

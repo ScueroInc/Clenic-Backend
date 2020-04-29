@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "euQQ4HLNNF2eSUU+TG+XmIjGQZo+HZhPFKzFKhsOIHXaG+hxrifCN2MQuM7onJkdgMAYGgGmUd9r33JtYVOc9w==",
+  "dgSpecHash": "Aw+zsAhfxuNMdGLf05lFPbIo8czy4S9uLzfzhJJ0wRnCjnj7kegExVAOxbwPnKohy7od3X6wt85QzKD9oS5BxQ==",
   "success": true,
-  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj",
+  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ryzen\\.nuget\\packages\\htmlagilitypack\\1.11.23\\htmlagilitypack.1.11.23.nupkg.sha512",
     "C:\\Users\\Ryzen\\.nuget\\packages\\jwt\\6.1.4\\jwt.6.1.4.nupkg.sha512",
