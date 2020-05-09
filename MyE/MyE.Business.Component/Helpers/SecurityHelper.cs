@@ -16,7 +16,7 @@ namespace MyE.Business.Component.Helpers
     {
         private static string AES_IV = "tm7T7Rz#$nuQ%3k_";
         private static string AES_KEY = "u?$$bM2XuE5y2CV*55mNvQruAa+xw5C^";
-        private static string SESSION_TOKEN_DURATION_HOURS = "1";
+        private static double SESSION_TOKEN_DURATION_HOURS = 1;
         public static string EncryptText(string plainText)
         {
             var iv = Encoding.UTF8.GetBytes(AES_IV);
@@ -65,29 +65,27 @@ namespace MyE.Business.Component.Helpers
         {
             var contraseña = objUsuario.Psw;
             var usuario = objUsuario.UsuarioId;
-            var time = BitConverter.GetBytes(DateTime.UtcNow.ToBinary());
-            var key = Guid.NewGuid().ToByteArray();
-            var tokenSinUsuario = Convert.ToBase64String(time.Concat(key).ToArray());
-            var token = contraseña+usuario+tokenSinUsuario;
-            token = EncryptText(token);
+            var fecha = DateTime.Now.ToString();           
+            var key = Guid.NewGuid().ToString();
+            var aEncriptar = fecha + usuario + contraseña+key ;           
+            var token = EncryptText(aEncriptar);
             return token;
         }
-        public static void ValidateToken(string token)
+        public static void ValidateTimeToken(string token)
         {
             try
             {
-                token = DecryptText(token);
-
-                var data = Convert.FromBase64String(token);
-                var createdAt = DateTime.FromBinary(BitConverter.ToInt64(data, 0));
-
-                var maxValidHours = int.Parse(SESSION_TOKEN_DURATION_HOURS);
-                if (createdAt < DateTime.UtcNow.AddHours(maxValidHours * -1))   
-                    throw new Exception();
+                token = DecryptText(token); 
+                var _fechaToken = token.Substring(0,18);
+                var fechaToken = Convert.ToDateTime(_fechaToken);               
+                if (DateTime.Compare(fechaToken.AddHours(SESSION_TOKEN_DURATION_HOURS), DateTime.Now)==-1)
+                {
+                    throw new ExceptionHelper(ConstantsHelper.SESSION_EXPIRED_MESSAGE);
+                }                              
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception(ConstantsHelper.SESSION_EXPIRED_MESSAGE);
+                throw ex;
             }
         }
     }

@@ -40,6 +40,28 @@ namespace MyE.Business.Workflow
             }
             return response;
         }
+        public bool RegistrarOrden(OrdenRqst objOrden) {
+            bool respuesta;
+            try
+            {
+                Orden newOrden = new Orden
+                {
+                    EmpleadoId=objOrden.EmpleadoId,
+                    LugarPersonasId=objOrden.Lugar_PersonaId,
+                    Estado=objOrden.Estado,
+                    FechaEjecucion=objOrden.FechaEjecucion,
+                    FechaGeneracion=objOrden.FechaGeneracion 
+                };
+                context.Orden.Add(newOrden);
+                context.SaveChanges();
+                respuesta = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return respuesta;
+        } 
     }
    
 }

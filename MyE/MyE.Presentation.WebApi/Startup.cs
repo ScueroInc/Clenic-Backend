@@ -114,7 +114,7 @@ namespace MyE.Presentation.WebApi
 
                 operation.Parameters.Add(new OpenApiParameter
                 {
-                    Name = ConfigurationBC.API_TOKEN_HEADER,
+                    //Name = ConfigurationBC.API_TOKEN_HEADER,
                     In = ParameterLocation.Header,
                     Required = false,
                     Schema = new OpenApiSchema

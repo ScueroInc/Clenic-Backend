@@ -21,10 +21,10 @@ namespace MyE.Presentation.WebApi.Controllers
         private LoginBW objBusinessLogin = new LoginBW();
 
         [NonAction]
-        protected bool validarTokenConData(string usernameSesion, string tokenAvalidar)
+        protected bool validateToken(UsuarioRes objUsuario, string tokenAvalidar)
         {
-            return objBusinessLogin.validarTokenConBd(usernameSesion,tokenAvalidar);
-            
+            SecurityHelper.ValidateTimeToken(tokenAvalidar);
+            return objBusinessLogin.validarTokenConBd(objUsuario);
         }
 
         [NonAction]

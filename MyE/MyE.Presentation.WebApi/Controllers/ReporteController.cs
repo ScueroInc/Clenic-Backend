@@ -28,9 +28,7 @@ namespace MyE.Presentation.WebApi.Controllers
                 var objUsuario = base.GetUsuario();
                 if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
                 var tokenAvalidar = objUsuario.SessionToken;
-                SecurityHelper.ValidateToken(tokenAvalidar);
-
-                var res = base.validarTokenConData(objUsuario.UsuarioId, tokenAvalidar);
+                var res = base.validateToken(objUsuario, tokenAvalidar);
 
 
                 if (res)
@@ -60,9 +58,7 @@ namespace MyE.Presentation.WebApi.Controllers
                 var objUsuario = base.GetUsuario();
                 if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
                 var tokenAvalidar = objUsuario.SessionToken;
-                SecurityHelper.ValidateToken(tokenAvalidar);
-
-                var res = base.validarTokenConData(objUsuario.UsuarioId, tokenAvalidar);
+                var res = base.validateToken(objUsuario, tokenAvalidar);
                 if (res)
                 {
                     var respuesta=objBusinessReportes.RegistrarReporte(objReporte);

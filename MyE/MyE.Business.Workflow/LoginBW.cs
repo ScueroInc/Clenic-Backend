@@ -42,7 +42,7 @@ namespace MyE.Business.Workflow
             return response;
         }
 
-        public bool validarTokenConBd(string usernameSesion, string tokenAvalidar)
+        public bool validarTokenConBd(UsuarioRes objUsuario)
         {
             var response = false;
             try
@@ -50,12 +50,12 @@ namespace MyE.Business.Workflow
                 var usuario = context.Usuario
                                      .Include(e => e.Persona)
                                      .ThenInclude(e => e.Empleado)
-                                     .FirstOrDefault(x => x.UsuarioId == usernameSesion);
+                                     .FirstOrDefault(x => x.UsuarioId == objUsuario.UsuarioId);
 
                 if (usuario == null)
                     throw new ExceptionHelper("El usuario no existe.");
-                if (usuario.Token!= tokenAvalidar)
-                    throw new ExceptionHelper("Sesion invalida, comuniquese con un administrador");
+                if (usuario.Token!= objUsuario.SessionToken)
+                    throw new ExceptionHelper("Sesion invalida, comuniquese con un administrador");           
                 response = true;
             }
             catch (Exception ex)

@@ -21,17 +21,14 @@ namespace MyE.Presentation.WebApi.Controllers
         [Produces("application/json")]
         [HttpGet]
         [Route("listaOrdenes")]
-        public IActionResult ListarOrdens() {
+        public IActionResult ListarOrdenes() {
             var response = default(IActionResult);
             try
-            {
+            {                
                 var objUsuario = base.GetUsuario();
                 if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
                 var tokenAvalidar = objUsuario.SessionToken;
-                SecurityHelper.ValidateToken(tokenAvalidar);
-
-                var res = base.validarTokenConData(objUsuario.UsuarioId, tokenAvalidar);
-
+                var res = base.validateToken(objUsuario, tokenAvalidar);
 
                 if (res)
                 {
@@ -48,7 +45,34 @@ namespace MyE.Presentation.WebApi.Controllers
             return response;
         }
 
-       
+        [HttpPost]
+        [Route("insertorden")]
+        public IActionResult RegistrarOrden(OrdenRqst newOrden)
+        {
+            var response = default(IActionResult);
+            try
+            {
+                base.ValidarModelo(newOrden);
+                var objUsuario = base.GetUsuario();
+                if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
+                var tokenAvalidar = objUsuario.SessionToken;
+                var res = base.validateToken(objUsuario, tokenAvalidar);
+                if (res)
+                {
+                    var respuesta = objBusinessOrdenes.RegistrarOrden(newOrden);
+                    response = Ok();
+                }
+                else
+                {
+                    throw new ExceptionHelper("HACKER");
+                }
+            }
+            catch (Exception ex)
+            {
+                response = base.ErrorResponse(ex);
+            }
+            return response;
+        }
 
     }
 }
