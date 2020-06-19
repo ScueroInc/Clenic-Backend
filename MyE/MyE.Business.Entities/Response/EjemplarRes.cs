@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace MyE.Business.Entities.Response
 {
-    public class UsuarioResponse
+    public class EjemplarRes
     {
         [Display(Name = "id")]
         [JsonProperty(PropertyName = "id")]
@@ -26,6 +26,10 @@ namespace MyE.Business.Entities.Response
         [JsonProperty(PropertyName = "perfil")]
         public string Perfil { get; set; }
 
+        [Display(Name = "personaId")]
+        [JsonProperty(PropertyName = "personaId")]
+        public int PersonaId { get; set; }
+
         //[Display(Name = "dni")]
         //[JsonProperty(PropertyName = "dni")]
         //public string Dni { get; set; }
@@ -42,17 +46,17 @@ namespace MyE.Business.Entities.Response
 
         //}
 
-        public UsuarioResponse(Usuario usuario, bool isLogin = false)
-        {
-            this.UsuarioId = usuario.UsuarioId;
-            this.Nombre = usuario.Persona.Npersona;
-            //this.Correo = usuario.Persona.Empleado.Correo;           
-            this.SessionToken = isLogin ? usuario.Token : "";
-            this.Perfil = usuario.Perfil;
-            //this.Dni= usuario.Persona.Empleado.Dni;
-            //this.NumContacto = usuario.Persona.Empleado.NumContacto;
-            //this.Tdireccion = usuario.Persona.Empleado.Tdireccion;
-        }
-        public UsuarioResponse() { }
+        //public UsuarioRes(Usuario usuario, bool isLogin = false)
+        //{
+        //    this.UsuarioId = usuario.UsuarioId;
+        //    this.Nombre = usuario.Persona.Npersona;
+        //    this.PersonaId= usuario.PersonaId;           
+        //    this.SessionToken = isLogin ? usuario.Token : "";
+        //    this.Perfil = usuario.Perfil;
+        //    //this.Dni= usuario.Persona.Empleado.Dni;
+        //    //this.NumContacto = usuario.Persona.Empleado.NumContacto;
+        //    //this.Tdireccion = usuario.Persona.Empleado.Tdireccion;
+        //}
+        //public UsuarioRes() { }
     }
 }

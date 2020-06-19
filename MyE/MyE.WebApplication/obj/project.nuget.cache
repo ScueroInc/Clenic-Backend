@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5dju+/ys4LB8QmIMK5r45Dh4wRmq8x3SNqU0DcR/WZ2v4vNQ04aUM5KcJYMPudKxeSg4QywkXqKzuTGXszjQdA==",
+  "dgSpecHash": "/dkYC+iTB9cxMvU9yX+NLjMDtvmDJ/Aa8SB1dN5GzGCa9PhaW+wTW2wz263DE9/d3DSOGzhZzpqzbDM9D5RxaQ==",
   "success": true,
-  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\my-E-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
+  "projectFilePath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -32,13 +32,13 @@ namespace MyE.Presentation.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Babel API",
+                    Title = "MyE API",
                     Version = "v1",
-                    Description = "REST API para las aplicaciones móviles del proyecto Babel.",
+                    Description = "REST API para las aplicaciones móviles del proyecto MyE.",
                     Contact = new OpenApiContact
                     {
-                        Name = "Bit Perfect Solutions S.A.C.",
-                        Email = "support@bitperfect.freshdesk.com"
+                        Name = "Astra Team",
+                        Email = "support@Astra.com"
                     }
                 });
 
@@ -112,16 +112,16 @@ namespace MyE.Presentation.WebApi
                 if (operation.Parameters == null)
                     operation.Parameters = new List<OpenApiParameter>();
 
-                operation.Parameters.Add(new OpenApiParameter
-                {
-                    Name = ConfigurationBC.API_TOKEN_HEADER,
-                    In = ParameterLocation.Header,
-                    Required = false,
-                    Schema = new OpenApiSchema
-                    {
-                        Type = "String"
-                    }
-                });
+                //operation.Parameters.Add(new OpenApiParameter
+                //{
+                //    //Name = ConfigurationBC.API_TOKEN_HEADER,
+                //    In = ParameterLocation.Header,
+                //    Required = false,
+                //    Schema = new OpenApiSchema
+                //    {
+                //        Type = "String"
+                //    }
+                //});
             }
         }
     }

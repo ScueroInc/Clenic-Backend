@@ -20,10 +20,5 @@
         public const string AES_KEY = "XfCVy*f#^gB$JM7ep@5h}gwD#P{I7A^!";
 
         public const string API_TOKEN_HEADER = "X-MyE-TOKEN";
-
-        public const string AMAZON_ACCESS_KEY = "AKIAJDJBC3XSTBUZT4YQ";
-        public const string AMAZON_SECRET_KEY = "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";
-        public const string AMAZON_REGION = "us-east-1";
-        public const string AMAZON_S3_BUCKET = "bitperfect";
     }
 }

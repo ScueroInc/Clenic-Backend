@@ -40,7 +40,7 @@ namespace MyE.Data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=tb2-mye-database.database.windows.net;Initial Catalog=MyE_Dev;Persist Security Info=True;User ID=DB-Admin;Password=6532519jA");
+                optionsBuilder.UseSqlServer("Server=tcp:tb2-mye-database.database.windows.net,1433;Initial Catalog=MyE_Dev;Persist Security Info=False;User ID=DB-Admin;Password=6532519jA;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
             }
         }
 
@@ -371,6 +371,10 @@ namespace MyE.Data
                 entity.Property(e => e.Asunto)
                     .IsRequired()
                     .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Estado)
+                    .HasMaxLength(1)
                     .IsUnicode(false);
 
                 entity.Property(e => e.FechaAtencion).HasColumnType("date");
