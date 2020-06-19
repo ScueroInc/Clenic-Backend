@@ -10,13 +10,8 @@ using System.Threading.Tasks;
 namespace MyE.Business.Component.Helpers
 {
     public static class ConstantsHelper
-    {
-        
-
-        public const string API_KEYSECRETA= "MyE_astra_keytoken";   //clave creo
-
-        //public static string GetWebSettingValue(string key)
-        //   => WebConfigurationManager.AppSettings[key];
+    { 
+       // public const string API_KEYSECRETA= "MyE_astra_keytoken";         
 
         public const string API_VERSION = "v1";
         public static string SESSION_EXPIRED_MESSAGE = "Su sesión ha caducado. Por favor, ingrese nuevamente.";
