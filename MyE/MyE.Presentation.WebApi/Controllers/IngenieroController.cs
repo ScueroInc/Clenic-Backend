@@ -49,7 +49,7 @@ namespace MyE.Presentation.WebApi.Controllers
         [Produces("application/json")]
         [HttpGet]
         [Route("getingeniero")]
-        public IActionResult ObtenerIngeniero(string UsuarioId)
+        public IActionResult ObtenerIngeniero(int ingenieroId)
         {
             var response = default(IActionResult);
             try
@@ -61,7 +61,7 @@ namespace MyE.Presentation.WebApi.Controllers
 
                 if (res)
                 {
-                    var ingeniero = objBusinessIngenieros.ObtenerIngeniero(UsuarioId);
+                    var ingeniero = objBusinessIngenieros.ObtenerIngeniero(ingenieroId);
                     response = Ok(ingeniero);
                 }
                 else

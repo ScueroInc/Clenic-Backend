@@ -31,6 +31,13 @@ namespace MyE.Business.Entities.Response
         [JsonProperty(PropertyName = "numeroDni")]
         public string Dni{ get; set; }
 
+        [Display(Name = "cordX")]
+        [JsonProperty(PropertyName = "cordX")]
+        public decimal? cordX { get; set; }
+
+        [Display(Name = "cordY")]
+        [JsonProperty(PropertyName = "cordY")]
+        public decimal? cordY { get; set; }
 
 
 
@@ -44,6 +51,8 @@ namespace MyE.Business.Entities.Response
             this.Direccion = objIngeniero.Empleado.Tdireccion;
             this.Correo = objIngeniero.Empleado.Correo;
             this.Dni = objIngeniero.Empleado.Dni;
+            this.cordX = objIngeniero.Empleado.CordX;
+            this.cordY = objIngeniero.Empleado.CordY;
         }
         public IngenieroRes() { }
     }
