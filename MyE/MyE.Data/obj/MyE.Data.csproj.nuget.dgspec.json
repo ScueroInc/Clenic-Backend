@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {}
+    "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {}
   },
   "projects": {
-    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
+    "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
+        "projectUniqueName": "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
         "projectName": "MyE.Data",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
-        "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\obj\\",
+        "projectPath": "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj",
+        "packagesPath": "C:\\Users\\Scuero\\.nuget\\packages\\",
+        "outputPath": "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ryzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Scuero\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
+              "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+                "projectPath": "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
               }
             }
           }
@@ -85,24 +85,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+    "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
+        "projectUniqueName": "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
         "projectName": "MyE.Entities",
-        "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
-        "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\obj\\",
+        "projectPath": "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
+        "packagesPath": "C:\\Users\\Scuero\\.nuget\\packages\\",
+        "outputPath": "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ryzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Scuero\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,7 +162,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
