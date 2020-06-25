@@ -34,3 +34,15 @@ D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\ne
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.csproj.CopyComplete
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.dll
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.pdb
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\bin\Debug\netcoreapp3.1\MyE.Business.Component.deps.json
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\bin\Debug\netcoreapp3.1\MyE.Business.Component.dll
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\bin\Debug\netcoreapp3.1\MyE.Business.Component.pdb
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\bin\Debug\netcoreapp3.1\MyE.Entities.dll
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\bin\Debug\netcoreapp3.1\MyE.Entities.pdb
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.csprojAssemblyReference.cache
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.AssemblyInfoInputs.cache
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.AssemblyInfo.cs
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.csproj.CoreCompileInputs.cache
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.csproj.CopyComplete
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.dll
+D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Component\obj\Debug\netcoreapp3.1\MyE.Business.Component.pdb
