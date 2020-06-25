@@ -16,6 +16,8 @@ namespace MyE.Entities
         public int ClienteId { get; set; }
         public int NumContacto { get; set; }
         public string Correo { get; set; }
+        public decimal? CordX { get; set; }
+        public decimal? CordY { get; set; }
 
         public virtual Cliente Cliente { get; set; }
         public virtual Lugar Lugar { get; set; }

@@ -16,7 +16,25 @@ namespace MyE.Presentation.WebApi.Controllers
     public class IngenieroController : BaseApiController
     {
         IngenierosBW objBusinessIngenieros = new IngenierosBW();
-     
+
+        [HttpGet]
+        [Route("test")]
+        public IActionResult Test()
+        {
+            var response = default(IActionResult);
+            try
+            {
+                response = Ok(new { 
+                atributo="gaaa"
+                });
+            }
+            catch (Exception ex)
+            {
+                response = base.ErrorResponse(ex);
+            }
+            return response;
+        }
+
         [Produces("application/json")]
         [HttpGet]
         [Route("listaIngenieros")]
@@ -49,7 +67,7 @@ namespace MyE.Presentation.WebApi.Controllers
         [Produces("application/json")]
         [HttpGet]
         [Route("getingeniero")]
-        public IActionResult ObtenerIngeniero(string UsuarioId)
+        public IActionResult ObtenerIngeniero(int ingenieroId)
         {
             var response = default(IActionResult);
             try
@@ -61,7 +79,7 @@ namespace MyE.Presentation.WebApi.Controllers
 
                 if (res)
                 {
-                    var ingeniero = objBusinessIngenieros.ObtenerIngeniero(UsuarioId);
+                    var ingeniero = objBusinessIngenieros.ObtenerIngeniero(ingenieroId);
                     response = Ok(ingeniero);
                 }
                 else

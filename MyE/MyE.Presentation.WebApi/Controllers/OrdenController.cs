@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -9,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using MyE.Business.Component.Helpers;
 using MyE.Business.Entities.Response;
 using MyE.Business.Workflow;
+using MyE.Data;
+using MyE.Entities;
 
 namespace MyE.Presentation.WebApi.Controllers
 {
@@ -25,8 +28,20 @@ namespace MyE.Presentation.WebApi.Controllers
             var response = default(IActionResult);
             try
             {                
+                SqlContext context = new SqlContext();
                 var objUsuario = base.GetUsuario();
+                //var _objUsuario = context.Usuario
+                //                        .Include(e=>e.Persona)
+                //                        .Single(e=>e.UsuarioId=="gonzaloescudero");
+                //var objUsuario = new UsuarioRes {
+                //    Nombre = _objUsuario.Persona.Npersona,
+                //    Perfil=_objUsuario.Perfil,
+                //    PersonaId=_objUsuario.PersonaId,
+                //    SessionToken=_objUsuario.Token,
+                //    UsuarioId=_objUsuario.UsuarioId
+                //};
                 if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
+                // var tokenAvalidar = objUsuario.SessionToken;
                 var tokenAvalidar = objUsuario.SessionToken;
                 var res = base.validateToken(objUsuario, tokenAvalidar);
 

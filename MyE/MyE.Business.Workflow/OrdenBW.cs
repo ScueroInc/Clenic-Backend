@@ -27,9 +27,10 @@ namespace MyE.Business.Workflow
                 var Ordenes = context.Orden
                                     .Include(e => e.LugarPersonas)
                                     .ThenInclude(e => e.Lugar)
+                                    .Include(e => e.Empleado)                                    
                                     .Include(e => e.LugarPersonas.Cliente)
                                     .ThenInclude(e => e.ClienteNavigation)
-                                    .Where(e => e.LugarPersonas.Cliente.ClienteId == id)
+                                    .Where(e => e.EmpleadoId== id)
                                     .ToList();
                                     
                 if (Ordenes is null) throw new ExceptionHelper("No se encontraron Ordenes"); 

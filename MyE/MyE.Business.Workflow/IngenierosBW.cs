@@ -35,14 +35,17 @@ namespace MyE.Business.Workflow
             return response;
         }
 
-        public IngenieroRes ObtenerIngeniero(string usuarioId)
+        public IngenieroRes ObtenerIngeniero(int ingenieroId)
         {
             var response = default(IngenieroRes);
             try
             {
-                var ingeniero = context.Usuario.Include(e => e.Persona).ThenInclude(e => e.Empleado).SingleOrDefault(e => e.UsuarioId == usuarioId);
+                var ingeniero = context.Usuario
+                                        .Include(e => e.Persona)
+                                        .ThenInclude(e => e.Empleado)
+                                        .SingleOrDefault(e => e.Persona.PersonaId == ingenieroId);
                 
-                if (ingeniero.Persona.Empleado is null) throw new ExceptionHelper("No se encontro registros");
+                if (ingeniero is null) throw new ExceptionHelper("No se encontro registros");
                 response = new IngenieroRes
                 {
                     Correo = ingeniero.Persona.Empleado.Correo,
