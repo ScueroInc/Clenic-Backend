@@ -2,8 +2,6 @@
   "profiles": {
     "MyE.Business.Component": {
       "commandName": "Project"
-
     }
   }
-
 }

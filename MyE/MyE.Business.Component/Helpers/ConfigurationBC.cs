@@ -3,6 +3,7 @@
     public static class ConfigurationBC
     {
         public const string SQL_CONNECTION_STRING = "server=bitperfect.dev;database=Babel_Dev;uid=adminbp;pwd=1adminbp1";
+
         //public const string FILE_BASE_PATH = @"C:\Babel\Upload";
         public const string FILE_BASE_PATH = "";
 

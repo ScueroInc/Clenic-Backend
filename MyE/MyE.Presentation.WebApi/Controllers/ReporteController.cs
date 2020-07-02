@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyE.Business.Component.Helpers;
 using MyE.Business.Entities.Response;
 using MyE.Business.Workflow;
+using System;
 
 namespace MyE.Presentation.WebApi.Controllers
 {
@@ -16,12 +10,13 @@ namespace MyE.Presentation.WebApi.Controllers
     [ApiController]
     public class ReporteController : BaseApiController
     {
-        ReporteBW objBusinessReportes = new ReporteBW();
-     
+        private ReporteBW objBusinessReportes = new ReporteBW();
+
         [Produces("application/json")]
         [HttpGet]
         [Route("listaReportes")]
-        public IActionResult ListarReportes() {
+        public IActionResult ListarReportes()
+        {
             var response = default(IActionResult);
             try
             {
@@ -30,17 +25,18 @@ namespace MyE.Presentation.WebApi.Controllers
                 var tokenAvalidar = objUsuario.SessionToken;
                 var res = base.validateToken(objUsuario, tokenAvalidar);
 
-
                 if (res)
                 {
                     var listaReportes = objBusinessReportes.ListarReportesDeIngeniero(objUsuario.PersonaId);
                     response = Ok(listaReportes);
                 }
-                else {
+                else
+                {
                     throw new ExceptionHelper("HACKER");
-                }                
+                }
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 response = base.ErrorResponse(ex);
             }
             return response;
@@ -50,7 +46,7 @@ namespace MyE.Presentation.WebApi.Controllers
         [HttpPost]
         [Route("insertreporte")]
         public IActionResult RegistrarReporte(ReporteRqst objReporte)
-        {                     
+        {
             var response = default(IActionResult);
             try
             {
@@ -61,7 +57,7 @@ namespace MyE.Presentation.WebApi.Controllers
                 var res = base.validateToken(objUsuario, tokenAvalidar);
                 if (res)
                 {
-                    var respuesta=objBusinessReportes.RegistrarReporte(objReporte);
+                    var respuesta = objBusinessReportes.RegistrarReporte(objReporte);
                     response = Ok();
                 }
                 else

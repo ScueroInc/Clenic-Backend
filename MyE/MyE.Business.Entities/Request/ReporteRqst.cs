@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace MyE.Business.Entities.Response
 {
@@ -18,23 +16,19 @@ namespace MyE.Business.Entities.Response
         [StringLength(200)]
         [Display(Name = "observacion")]
         [JsonProperty(PropertyName = "observacion")]
-        public string Observacion{ get; set; }
+        public string Observacion { get; set; }
 
-    
         [Display(Name = "fechaAtencion")]
         [JsonProperty(PropertyName = "fechaAtencion")]
         public DateTime FechaAtencion { get; set; }
 
-     
         [Display(Name = "fechaEjecucion")]
         [JsonProperty(PropertyName = "fechaEjecucion")]
-        public DateTime FechaEjecucion{ get; set; }
+        public DateTime FechaEjecucion { get; set; }
 
         [Required]
         [Display(Name = "ordenServicioId")]
         [JsonProperty(PropertyName = "ordenServicioId")]
-        public int OrdenServicioId{ get; set; }
-
-
+        public int OrdenServicioId { get; set; }
     }
 }

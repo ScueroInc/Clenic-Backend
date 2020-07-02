@@ -14,6 +14,7 @@ namespace MyE.Business.Component.Helpers
                 return ms.ToArray();
             }
         }
+
         public static T FromByteArray<T>(byte[] data)
         {
             var bf = new BinaryFormatter();

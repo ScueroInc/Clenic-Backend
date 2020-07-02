@@ -1,7 +1,7 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using MyE.Entities;
+﻿using MyE.Entities;
 using Newtonsoft.Json;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyE.Business.Entities.Response
 {
@@ -14,7 +14,7 @@ namespace MyE.Business.Entities.Response
         [Display(Name = "fechaGeneracion")]
         [JsonProperty(PropertyName = "fechaGeneracion")]
         public DateTime? FechaGeneracion { get; set; }
-        
+
         [Display(Name = "fechaEjecucion")]
         [JsonProperty(PropertyName = "fechaEjecucion")]
         public DateTime? FechaEjecucion { get; set; }
@@ -29,8 +29,7 @@ namespace MyE.Business.Entities.Response
 
         [Display(Name = "id_cliente")]
         [JsonProperty(PropertyName = "id_cliente")]
-        public int ClienteId{ get; set; }
-
+        public int ClienteId { get; set; }
 
         [Display(Name = "nombreCliente")]
         [JsonProperty(PropertyName = "nombreCliente")]
@@ -46,16 +45,19 @@ namespace MyE.Business.Entities.Response
 
         public OrdenesIngenieroRes(Orden objOrden)
         {
-            this.CorreoCliente= objOrden.LugarPersonas.Correo;
-            this.DireccionLugar= objOrden.LugarPersonas.Lugar.Tdireccion;
-            this.FechaEjecucion= objOrden.FechaEjecucion;
+            this.CorreoCliente = objOrden.LugarPersonas.Correo;
+            this.DireccionLugar = objOrden.LugarPersonas.Lugar.Tdireccion;
+            this.FechaEjecucion = objOrden.FechaEjecucion;
             this.FechaGeneracion = objOrden.FechaGeneracion.Value;
-            this.Estado= objOrden.Estado;
-            this.Lugar_PersonasId= objOrden.LugarPersonasId;
-            this.NombreCliente= objOrden.LugarPersonas.Cliente.ClienteNavigation.Npersona;
+            this.Estado = objOrden.Estado;
+            this.Lugar_PersonasId = objOrden.LugarPersonasId;
+            this.NombreCliente = objOrden.LugarPersonas.Cliente.ClienteNavigation.Npersona;
             this.ClienteId = objOrden.LugarPersonas.Cliente.ClienteId;
-            this.OrdenId= objOrden.OrdenId;           
+            this.OrdenId = objOrden.OrdenId;
         }
-        public OrdenesIngenieroRes() { }
+
+        public OrdenesIngenieroRes()
+        {
+        }
     }
 }

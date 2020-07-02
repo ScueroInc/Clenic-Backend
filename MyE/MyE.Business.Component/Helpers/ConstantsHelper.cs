@@ -1,17 +1,11 @@
-﻿using Microsoft.Extensions.Configuration;
-using System;
-using System.CodeDom;
-using System.Collections.Generic;
+﻿using System;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyE.Business.Component.Helpers
 {
     public static class ConstantsHelper
-    { 
-       // public const string API_KEYSECRETA= "MyE_astra_keytoken";         
+    {
+        // public const string API_KEYSECRETA= "MyE_astra_keytoken";
 
         public const string API_VERSION = "v1";
         public static string SESSION_EXPIRED_MESSAGE = "Su sesión ha caducado. Por favor, ingrese nuevamente.";
@@ -19,7 +13,6 @@ namespace MyE.Business.Component.Helpers
         public const string ENTIDAD_ESTADO_ACTIVO = "ACT";
         public const string ENTIDAD_ESTADO_INACTIVO = "INA";
         public const string USUARIO_ESTADO_BLOQUEADO = "BLO";
-       
 
         public const string ROL_CODIGO_ADMINISTRADOR = "ADM";
         public const string ROL_CODIGO_CONDUCTOR = "CON";
@@ -43,17 +36,17 @@ namespace MyE.Business.Component.Helpers
         {
             return Guid.NewGuid().ToString().Substring(0, Guid.NewGuid().ToString().IndexOf("-")).ToUpper();
         }
+
         public static string GetAppSettingValue(string key, string strDefault = "")
-        {           
+        {
             return string.IsNullOrEmpty(key) ? "" : ConfigurationManager.AppSettings[key].ToSafeString(strDefault);
         }
-
-
 
         public static string RenderEntidadEstado(string estado)
         {
             return "<span class=\"\" style=\"color: " + GetEntidadEstadoColor(estado) + " !important;\">" + GetEntidadEstadoTexto(estado) + "</span>";
         }
+
         public static string GetEntidadEstadoColor(string estado)
         {
             var color = "";
@@ -68,6 +61,7 @@ namespace MyE.Business.Component.Helpers
 
             return color;
         }
+
         public static string GetEntidadEstadoTexto(string estado)
         {
             var texto = "";

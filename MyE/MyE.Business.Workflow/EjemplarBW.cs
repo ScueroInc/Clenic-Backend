@@ -1,14 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using MyE.Business.Component.Helpers;
-using MyE.Business.Entities.Response;
-using MyE.Data;
-using MyE.Entities;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using MyE.Data;
 
 namespace MyE.Business.Workflow
 {
@@ -16,7 +6,8 @@ namespace MyE.Business.Workflow
     {
         private SqlContext context;
 
-        public EjemplarBW() {
+        public EjemplarBW()
+        {
             context = new SqlContext();
         }
 
@@ -32,9 +23,9 @@ namespace MyE.Business.Workflow
         //                            .ThenInclude(e => e.Empleado)
         //                            .ThenInclude(e => e.EmpleadoNavigation)
         //                            .Where(e => e.OrdenServicio.OrdenDetalle.Orden.EmpleadoId == id);
-        //        if (Ejemplars is null) throw new ExceptionHelper("No se encontraron Ejemplars");                
+        //        if (Ejemplars is null) throw new ExceptionHelper("No se encontraron Ejemplars");
         //        context.SaveChanges();
-        //        response = Ejemplars.Select(e=> new EjemplarIngenieroRes(e)).ToList();               
+        //        response = Ejemplars.Select(e=> new EjemplarIngenieroRes(e)).ToList();
         //    }
         //    catch (Exception ex){
         //        throw ex;
@@ -55,11 +46,11 @@ namespace MyE.Business.Workflow
         //            FechaEjecucion= default(DateTime),
         //            FechaGeneracion=DateTime.Now,
         //            Observacion= objEjemplarRqst.Observacion,
-        //            OrdenServicioId=objEjemplarRqst.OrdenServicioId,                    
+        //            OrdenServicioId=objEjemplarRqst.OrdenServicioId,
         //        };
         //        context.Ejemplar.Add(objEjemplar);
         //        context.SaveChanges();
-        //        respuesta = true;               
+        //        respuesta = true;
         //    }
         //    catch (Exception ex)
         //    {
@@ -68,5 +59,4 @@ namespace MyE.Business.Workflow
         //    return respuesta;
         //}
     }
-   
 }

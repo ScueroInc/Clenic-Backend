@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
 using MyE.Business.Component.Helpers;
 using MyE.Business.Entities.Response;
 using MyE.Data;
 using MyE.Entities;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,42 +13,47 @@ namespace MyE.Business.Workflow
     {
         private SqlContext context;
 
-        public OrdenBW() {
+        public OrdenBW()
+        {
             context = new SqlContext();
         }
 
-        public List<OrdenesIngenieroRes> ListarOrdenesDeIngeniero(int id) {
+        public List<OrdenesIngenieroRes> ListarOrdenesDeIngeniero(int id)
+        {
             var response = default(List<OrdenesIngenieroRes>);
             try
             {
                 var Ordenes = context.Orden
                                     .Include(e => e.LugarPersonas)
                                     .ThenInclude(e => e.Lugar)
-                                    .Include(e => e.Empleado)                                    
+                                    .Include(e => e.Empleado)
                                     .Include(e => e.LugarPersonas.Cliente)
                                     .ThenInclude(e => e.ClienteNavigation)
-                                    .Where(e => e.EmpleadoId== id)
+                                    .Where(e => e.EmpleadoId == id)
                                     .ToList();
-                                    
-                if (Ordenes is null) throw new ExceptionHelper("No se encontraron Ordenes"); 
-                response =Ordenes.Select(e => new OrdenesIngenieroRes(e)).ToList();
+
+                if (Ordenes is null) throw new ExceptionHelper("No se encontraron Ordenes");
+                response = Ordenes.Select(e => new OrdenesIngenieroRes(e)).ToList();
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 throw ex;
             }
             return response;
         }
-        public bool RegistrarOrden(OrdenRqst objOrden) {
+
+        public bool RegistrarOrden(OrdenRqst objOrden)
+        {
             bool respuesta;
             try
             {
                 Orden newOrden = new Orden
                 {
-                    EmpleadoId=objOrden.EmpleadoId,
-                    LugarPersonasId=objOrden.Lugar_PersonaId,
-                    Estado=objOrden.Estado,
-                    FechaEjecucion=objOrden.FechaEjecucion,
-                    FechaGeneracion=objOrden.FechaGeneracion 
+                    EmpleadoId = objOrden.EmpleadoId,
+                    LugarPersonasId = objOrden.Lugar_PersonaId,
+                    Estado = objOrden.Estado,
+                    FechaEjecucion = objOrden.FechaEjecucion,
+                    FechaGeneracion = objOrden.FechaGeneracion
                 };
                 context.Orden.Add(newOrden);
                 context.SaveChanges();
@@ -62,7 +64,6 @@ namespace MyE.Business.Workflow
                 throw ex;
             }
             return respuesta;
-        } 
+        }
     }
-   
 }

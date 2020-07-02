@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using MyE.Entities;
+﻿using MyE.Entities;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyE.Business.Entities.Response
 {
@@ -13,7 +13,7 @@ namespace MyE.Business.Entities.Response
         [Display(Name = "nombre")]
         [JsonProperty(PropertyName = "nombre")]
         public string Nombre { get; set; }
-        
+
         [Display(Name = "session_token")]
         [JsonProperty(PropertyName = "session_token")]
         public string SessionToken { get; set; }
@@ -43,20 +43,22 @@ namespace MyE.Business.Entities.Response
         //public string Tdireccion { get; set; }
         //public UsuarioResponse()
         //{
-
         //}
 
         public UsuarioRes(Usuario usuario, bool isLogin = false)
         {
             this.UsuarioId = usuario.UsuarioId;
             this.Nombre = usuario.Persona.Npersona;
-            this.PersonaId= usuario.PersonaId;           
+            this.PersonaId = usuario.PersonaId;
             this.SessionToken = isLogin ? usuario.Token : "";
             this.Perfil = usuario.Perfil;
             //this.Dni= usuario.Persona.Empleado.Dni;
             //this.NumContacto = usuario.Persona.Empleado.NumContacto;
             //this.Tdireccion = usuario.Persona.Empleado.Tdireccion;
         }
-        public UsuarioRes() { }
+
+        public UsuarioRes()
+        {
+        }
     }
 }

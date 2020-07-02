@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyE.Business.Component.Helpers;
 using MyE.Business.Workflow;
+using System;
 
 namespace MyE.Presentation.WebApi.Controllers
 {
@@ -15,7 +9,7 @@ namespace MyE.Presentation.WebApi.Controllers
     [ApiController]
     public class IngenieroController : BaseApiController
     {
-        IngenierosBW objBusinessIngenieros = new IngenierosBW();
+        private IngenierosBW objBusinessIngenieros = new IngenierosBW();
 
         [HttpGet]
         [Route("test")]
@@ -24,8 +18,9 @@ namespace MyE.Presentation.WebApi.Controllers
             var response = default(IActionResult);
             try
             {
-                response = Ok(new { 
-                atributo="gaaa"
+                response = Ok(new
+                {
+                    atributo = "gaaa"
                 });
             }
             catch (Exception ex)
@@ -38,27 +33,29 @@ namespace MyE.Presentation.WebApi.Controllers
         [Produces("application/json")]
         [HttpGet]
         [Route("listaIngenieros")]
-        public IActionResult ListarIngenieros() {
+        public IActionResult ListarIngenieros()
+        {
             var response = default(IActionResult);
             try
             {
                 var objUsuario = base.GetUsuario();
                 if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
-                var tokenAvalidar = objUsuario.SessionToken;   
+                var tokenAvalidar = objUsuario.SessionToken;
 
                 var res = base.validateToken(objUsuario, tokenAvalidar);
-
 
                 if (res)
                 {
                     var listaIngenieros = objBusinessIngenieros.ListarIngenieros();
                     response = Ok(listaIngenieros);
                 }
-                else {
+                else
+                {
                     throw new ExceptionHelper("HACKER");
-                }                
+                }
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 response = base.ErrorResponse(ex);
             }
             return response;

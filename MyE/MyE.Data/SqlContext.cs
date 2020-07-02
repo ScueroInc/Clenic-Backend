@@ -1,7 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
 using MyE.Entities;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace MyE.Data
 {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YiJrzqgTz4muf0bUQPlDP6WBxdY6YI//VC6rkQUE0P2zUeYaRsqKV4amkuoZv59FRAtPAHRJP5WaTicCPjV6OA==",
+  "dgSpecHash": "Wev+8yo1uaHmvICUQL6y9b+tNm8c0IMGO5uBXBalVX8UeXrl5uB30cMHGgin+jrgK5cnQZo7410gmWxQVFKYZw==",
   "success": true,
   "projectFilePath": "D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE.Presentation.WebApi\\MyE.Presentation.WebApi.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.1\\microsoft.aspnetcore.authentication.jwtbearer.3.1.1.nupkg.sha512",
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
+    "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\2.2.0\\microsoft.aspnetcore.dataprotection.abstractions.2.2.0.nupkg.sha512",

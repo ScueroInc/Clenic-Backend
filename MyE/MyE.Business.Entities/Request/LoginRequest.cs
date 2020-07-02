@@ -1,8 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace MyE.Business.Entities.Response
 {
@@ -19,6 +16,5 @@ namespace MyE.Business.Entities.Response
         [Display(Name = "password")]
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
-
     }
 }

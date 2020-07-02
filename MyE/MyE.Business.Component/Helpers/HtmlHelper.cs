@@ -22,7 +22,6 @@ namespace MyE.Business.Component.Helpers
             return sw.ToString();
         }
 
-
         /// <summary>
         /// Count the words.
         /// The content has to be converted to plain text before (using ConvertToPlainText).
@@ -34,7 +33,6 @@ namespace MyE.Business.Component.Helpers
             return !String.IsNullOrEmpty(plainText) ? plainText.Split(' ', '\n').Length : 0;
         }
 
-
         public static string Cut(string text, int length)
         {
             if (!String.IsNullOrEmpty(text) && text.Length > length)
@@ -44,7 +42,6 @@ namespace MyE.Business.Component.Helpers
             return text;
         }
 
-
         private static void ConvertContentTo(HtmlNode node, TextWriter outText)
         {
             foreach (HtmlNode subnode in node.ChildNodes)
@@ -52,7 +49,6 @@ namespace MyE.Business.Component.Helpers
                 ConvertTo(subnode, outText);
             }
         }
-
 
         private static void ConvertTo(HtmlNode node, TextWriter outText)
         {
@@ -94,6 +90,7 @@ namespace MyE.Business.Component.Helpers
                             // treat paragraphs as crlf
                             outText.Write("\r\n");
                             break;
+
                         case "br":
                             outText.Write("\r\n");
                             break;

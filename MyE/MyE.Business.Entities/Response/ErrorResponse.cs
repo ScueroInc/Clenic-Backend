@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace MyE.Business.Entities.Response
 {
@@ -16,7 +11,6 @@ namespace MyE.Business.Entities.Response
 
         public ErrorResponse()
         {
-
         }
 
         public ErrorResponse(string message)

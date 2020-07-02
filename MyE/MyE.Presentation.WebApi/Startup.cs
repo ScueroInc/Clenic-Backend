@@ -1,18 +1,14 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System.Text;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using MyE.Business.Component.Helpers;
-using System.Configuration;
+using System;
+using System.Collections.Generic;
 
 namespace MyE.Presentation.WebApi
 {
@@ -21,7 +17,8 @@ namespace MyE.Presentation.WebApi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-        }   
+        }
+
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
@@ -71,24 +68,29 @@ namespace MyE.Presentation.WebApi
             //        Encoding.UTF8.GetBytes(Configuration["JWT_SECRET"])),
             //         ClockSkew = TimeSpan.Zero
             //     });
-
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                    builder.SetIsOriginAllowed(_ => true)
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
             services.AddMvc();  //...................................PARA LA SESION
         }
-    
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {            
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+        public void Configure(IApplicationBuilder app )
+        {
+
+
+            app.UseCors();
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseAuthentication();       
+            app.UseAuthentication();
             app.UseSession();
 
             app.UseEndpoints(endpoints =>
@@ -99,10 +101,9 @@ namespace MyE.Presentation.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Babel Api V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.RoutePrefix = string.Empty;
             });
-
-
         }
 
         public class CustomHeaderSwaggerAttribute : IOperationFilter

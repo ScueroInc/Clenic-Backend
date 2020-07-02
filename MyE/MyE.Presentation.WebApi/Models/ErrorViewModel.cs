@@ -1,5 +1,3 @@
-using System;
-
 namespace MyE.Presentation.WebApi.Models
 {
     public class ErrorViewModel

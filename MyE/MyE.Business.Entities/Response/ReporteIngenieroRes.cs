@@ -1,7 +1,7 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using MyE.Entities;
+﻿using MyE.Entities;
 using Newtonsoft.Json;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyE.Business.Entities.Response
 {
@@ -14,14 +14,14 @@ namespace MyE.Business.Entities.Response
         [Display(Name = "asunto")]
         [JsonProperty(PropertyName = "asunto")]
         public string Asunto { get; set; }
-        
+
         [Display(Name = "observacion")]
         [JsonProperty(PropertyName = "observacion")]
         public string Observacion { get; set; }
 
         [Display(Name = "fechaGeneracion")]
         [JsonProperty(PropertyName = "fechaGeneracion")]
-        public DateTime FechaGeneracion{ get; set; }
+        public DateTime FechaGeneracion { get; set; }
 
         [Display(Name = "fechaEjecucion")]
         [JsonProperty(PropertyName = "fechaEjecucion")]
@@ -37,13 +37,12 @@ namespace MyE.Business.Entities.Response
 
         [Display(Name = "id_servicio")]
         [JsonProperty(PropertyName = "id_servicio")]
-        public int ServicioId{ get; set; }
+        public int ServicioId { get; set; }
 
         [Display(Name = "nombreServicio")]
         [JsonProperty(PropertyName = "nombreServicio")]
         public string NombreServicio { get; set; }
 
-   
         //[Display(Name = "num_contacto")]
         //[JsonProperty(PropertyName = "num_contacto")]
         //public int NumContacto { get; set; }
@@ -53,20 +52,22 @@ namespace MyE.Business.Entities.Response
         //public string Tdireccion { get; set; }
         //public UsuarioResponse()
         //{
-
         //}
 
         public ReporteIngenieroRes(Reporte objReporte)
         {
-            this.Asunto= objReporte.Asunto;
-            this.FechaAtencion= objReporte.FechaAtencion.Value;
-            this.FechaEjecucion= objReporte.FechaEjecucion.Value;
+            this.Asunto = objReporte.Asunto;
+            this.FechaAtencion = objReporte.FechaAtencion.Value;
+            this.FechaEjecucion = objReporte.FechaEjecucion.Value;
             this.FechaGeneracion = objReporte.FechaGeneracion;
-            this.Observacion= objReporte.Observacion;
+            this.Observacion = objReporte.Observacion;
             this.OrdenServicioId = objReporte.OrdenServicioId;
-            this.ServicioId= objReporte.OrdenServicio.ServicioId;
-            this.NombreServicio = objReporte.OrdenServicio.Servicio.Nservicio;       
+            this.ServicioId = objReporte.OrdenServicio.ServicioId;
+            this.NombreServicio = objReporte.OrdenServicio.Servicio.Nservicio;
         }
-        public ReporteIngenieroRes() { }
+
+        public ReporteIngenieroRes()
+        {
+        }
     }
 }

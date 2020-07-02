@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
 using MyE.Business.Component.Helpers;
 using MyE.Business.Entities.Response;
 using MyE.Data;
 using MyE.Entities;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,27 +13,30 @@ namespace MyE.Business.Workflow
     {
         private SqlContext context;
 
-        public ReporteBW() {
+        public ReporteBW()
+        {
             context = new SqlContext();
         }
 
-        public List<ReporteIngenieroRes> ListarReportesDeIngeniero(int id) {
+        public List<ReporteIngenieroRes> ListarReportesDeIngeniero(int id)
+        {
             var response = default(List<ReporteIngenieroRes>);
             try
             {
                 var reportes = context.Reporte
                                     .Include(e => e.OrdenServicio)
-                                    .ThenInclude(e=>e.Servicio)
+                                    .ThenInclude(e => e.Servicio)
                                     .Include(e => e.OrdenServicio.OrdenDetalle)
                                     .ThenInclude(e => e.Orden)
                                     .ThenInclude(e => e.Empleado)
                                     .ThenInclude(e => e.EmpleadoNavigation)
                                     .Where(e => e.OrdenServicio.OrdenDetalle.Orden.EmpleadoId == id);
-                if (reportes is null) throw new ExceptionHelper("No se encontraron reportes");                
+                if (reportes is null) throw new ExceptionHelper("No se encontraron reportes");
                 context.SaveChanges();
-                response = reportes.Select(e=> new ReporteIngenieroRes(e)).ToList();               
+                response = reportes.Select(e => new ReporteIngenieroRes(e)).ToList();
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 throw ex;
             }
             return response;
@@ -49,17 +49,17 @@ namespace MyE.Business.Workflow
             {
                 Reporte objReporte = new Reporte
                 {
-                    Asunto= objReporteRqst.Asunto,
-                    Estado="A",
-                    FechaAtencion=default(DateTime),
-                    FechaEjecucion= default(DateTime),
-                    FechaGeneracion=DateTime.Now,
-                    Observacion= objReporteRqst.Observacion,
-                    OrdenServicioId=objReporteRqst.OrdenServicioId,                    
+                    Asunto = objReporteRqst.Asunto,
+                    Estado = "A",
+                    FechaAtencion = default(DateTime),
+                    FechaEjecucion = default(DateTime),
+                    FechaGeneracion = DateTime.Now,
+                    Observacion = objReporteRqst.Observacion,
+                    OrdenServicioId = objReporteRqst.OrdenServicioId,
                 };
                 context.Reporte.Add(objReporte);
                 context.SaveChanges();
-                respuesta = true;               
+                respuesta = true;
             }
             catch (Exception ex)
             {
@@ -68,5 +68,4 @@ namespace MyE.Business.Workflow
             return respuesta;
         }
     }
-   
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MyE.Entities
+﻿namespace MyE.Entities
 {
     public partial class Usuario
     {

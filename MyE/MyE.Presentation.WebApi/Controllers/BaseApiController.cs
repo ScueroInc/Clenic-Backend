@@ -1,23 +1,18 @@
-﻿using MyE.Business.Component.Helpers;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using MyE.Business.Component.Helpers;
 using MyE.Business.Entities.Response;
+using MyE.Business.Workflow;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using Microsoft.Extensions.Primitives;
 using X.PagedList;
-using Newtonsoft.Json;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using MyE.Business.Workflow;
 
 namespace MyE.Presentation.WebApi.Controllers
 {
     public class BaseApiController : ControllerBase
     {
-
         private LoginBW objBusinessLogin = new LoginBW();
 
         [NonAction]
@@ -33,7 +28,6 @@ namespace MyE.Presentation.WebApi.Controllers
             var res = objBusinessLogin.Loguearse(model.Username, model.Password);
             HttpContext.Session.Set("USUARIO", ConvertHelper.ToByteArray(JsonConvert.SerializeObject(res)));
             return res;
-
         }
 
         [NonAction]
@@ -61,7 +55,7 @@ namespace MyE.Presentation.WebApi.Controllers
             var usuario = JsonConvert.DeserializeObject<UsuarioRes>(jsonUsuario);
             return usuario;
         }
-        
+
         [NonAction]
         protected void ValidarModelo(object model)
         {

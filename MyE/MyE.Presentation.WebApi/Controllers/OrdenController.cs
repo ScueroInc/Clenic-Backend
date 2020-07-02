@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyE.Business.Component.Helpers;
 using MyE.Business.Entities.Response;
 using MyE.Business.Workflow;
 using MyE.Data;
-using MyE.Entities;
+using System;
 
 namespace MyE.Presentation.WebApi.Controllers
 {
@@ -19,15 +11,16 @@ namespace MyE.Presentation.WebApi.Controllers
     [ApiController]
     public class OrdenController : BaseApiController
     {
-        OrdenBW objBusinessOrdenes = new OrdenBW();
-     
+        private OrdenBW objBusinessOrdenes = new OrdenBW();
+
         [Produces("application/json")]
         [HttpGet]
         [Route("listaOrdenes")]
-        public IActionResult ListarOrdenes() {
+        public IActionResult ListarOrdenes()
+        {
             var response = default(IActionResult);
             try
-            {                
+            {
                 SqlContext context = new SqlContext();
                 var objUsuario = base.GetUsuario();
                 //var _objUsuario = context.Usuario
@@ -50,11 +43,13 @@ namespace MyE.Presentation.WebApi.Controllers
                     var listaOrdenes = objBusinessOrdenes.ListarOrdenesDeIngeniero(objUsuario.PersonaId);
                     response = Ok(listaOrdenes);
                 }
-                else {
+                else
+                {
                     throw new ExceptionHelper("HACKER");
-                }                
+                }
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 response = base.ErrorResponse(ex);
             }
             return response;
@@ -88,6 +83,5 @@ namespace MyE.Presentation.WebApi.Controllers
             }
             return response;
         }
-
     }
 }
