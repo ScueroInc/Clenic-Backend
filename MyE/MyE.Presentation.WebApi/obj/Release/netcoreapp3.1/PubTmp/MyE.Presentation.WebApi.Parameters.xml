@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="Default Web Site" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Escritorio\\Moviles\\Trabajo\\backend\\Clenic-Backend\\MyE\\MyE\.Presentation\.WebApi\\bin\\Release\\netcoreapp3\.1\\publish\\$" />
-  </parameter>
-</parameters>
