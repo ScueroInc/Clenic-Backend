@@ -23,28 +23,24 @@ namespace MyE.Business.Workflow
             try
             {
                 var usuario = context.Usuario
-                                     .Include(e=>e.Persona)
-                                     .ThenInclude(e=>e.Empleado)
-                                     .FirstOrDefault(x => x.UsuarioId == username);
-
-                if (usuario == null)
-                    throw new ExceptionHelper("El usuario no existe.");
-                if (usuario.Psw != psw)
-                throw new ExceptionHelper("Contraseña incorrecta."); 
-                
+                                     .Include(e => e.Persona)
+                                     .ThenInclude(e => e.Empleado)
+                                     .SingleOrDefault(x => x.UsuarioId == username);
+                if (usuario is null) throw new Exception();
                 usuario.Token = SecurityHelper.GenerateToken(usuario);
                 context.SaveChanges();
-                response = new UsuarioRes(usuario, true);               
+                response = new UsuarioRes(usuario, true);
             }
-            catch (Exception ex){
-                throw ex;
+            catch 
+            {
+                response = null;
             }
             return response;
         }
 
-        public bool validarTokenConBd(UsuarioRes objUsuario)
+        public bool? validarTokenConBd(UsuarioRes objUsuario)
         {
-            var response = false;
+            bool? response = false;
             try
             {
                 var usuario = context.Usuario
@@ -53,14 +49,14 @@ namespace MyE.Business.Workflow
                                      .FirstOrDefault(x => x.UsuarioId == objUsuario.UsuarioId);
 
                 if (usuario == null)
-                    throw new ExceptionHelper("El usuario no existe.");
+                    throw new ExceptionHelper(401,"El usuario no existe.");
                 if (usuario.Token!= objUsuario.SessionToken)
-                    throw new ExceptionHelper("Sesion invalida, comuniquese con un administrador");           
+                    throw new ExceptionHelper(401,"Sesion invalida, comuniquese con un administrador");           
                 response = true;
             }
-            catch (Exception ex)
+            catch 
             {
-                throw ex;
+                response = null;
             }
             return response;
         }

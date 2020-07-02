@@ -25,10 +25,10 @@ namespace MyE.Presentation.WebApi.Controllers
             try
             {
                 response = Ok(new { 
-                atributo="gaaa"
+                atributo="gEEEEEE"
                 });
             }
-            catch (Exception ex)
+            catch (ExceptionHelper ex)
             {
                 response = base.ErrorResponse(ex);
             }
@@ -43,22 +43,16 @@ namespace MyE.Presentation.WebApi.Controllers
             try
             {
                 var objUsuario = base.GetUsuario();
-                if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
-                var tokenAvalidar = objUsuario.SessionToken;   
-
-                var res = base.validateToken(objUsuario, tokenAvalidar);
-
-
-                if (res)
-                {
-                    var listaIngenieros = objBusinessIngenieros.ListarIngenieros();
-                    response = Ok(listaIngenieros);
-                }
-                else {
-                    throw new ExceptionHelper("HACKER");
-                }                
+                if (objUsuario is null) throw new ExceptionHelper(401,"No se a iniciado sesion");
+                if (!(objUsuario.Perfil == "A" || objUsuario.Perfil == "S")) throw new ExceptionHelper(401, "No tiene los permisos para acceder");
+                var tokenSesion = objUsuario.SessionToken;   
+                var res = base.validateToken(objUsuario, tokenSesion);
+                if (res is null) throw new ExceptionHelper(401,"Token inválido");
+            
+                var listaIngenieros = objBusinessIngenieros.ListarIngenieros(objUsuario);              
+                response = Ok(listaIngenieros);                                           
             }
-            catch (Exception ex){
+            catch (ExceptionHelper ex){
                 response = base.ErrorResponse(ex);
             }
             return response;
@@ -73,21 +67,43 @@ namespace MyE.Presentation.WebApi.Controllers
             try
             {
                 var objUsuario = base.GetUsuario();
-                if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
-                var tokenAvalidar = objUsuario.SessionToken;
-                var res = base.validateToken(objUsuario, tokenAvalidar);
+                if (objUsuario is null) throw new ExceptionHelper(401, "No se a iniciado sesion");
+                if (!(objUsuario.Perfil == "A" || objUsuario.Perfil == "S")) throw new ExceptionHelper(401, "No tiene los permisos para acceder");
+                var tokenSesion = objUsuario.SessionToken;
 
-                if (res)
-                {
-                    var ingeniero = objBusinessIngenieros.ObtenerIngeniero(ingenieroId);
-                    response = Ok(ingeniero);
-                }
-                else
-                {
-                    throw new ExceptionHelper("Ocurrio un error inesperado, vuelva a intentarlo");
-                }
+                var res = base.validateToken(objUsuario, tokenSesion);
+                if (res is null) throw new ExceptionHelper(401, "Token inválido");
+              
+                var ingeniero = objBusinessIngenieros.ObtenerIngeniero(ingenieroId);
+                response = Ok(ingeniero);         
             }
-            catch (Exception ex)
+            catch (ExceptionHelper ex)
+            {
+                response = base.ErrorResponse(ex);
+            }
+            return response;
+        }
+
+        [Produces("application/json")]
+        [HttpGet]
+        [Route("registroingeniero")]
+        public IActionResult RegistrarIngeniero(int ingenieroId)
+        {
+            var response = default(IActionResult);
+            try
+            {
+                var objUsuario = base.GetUsuario();
+                if (objUsuario is null) throw new ExceptionHelper(401, "No se a iniciado sesion");
+                if (!(objUsuario.Perfil == "A" || objUsuario.Perfil == "S")) throw new ExceptionHelper(401, "No tiene los permisos para acceder");
+                var tokenSesion = objUsuario.SessionToken;
+
+                var res = base.validateToken(objUsuario, tokenSesion);
+                if (res is null) throw new ExceptionHelper(401, "Token inválido");
+
+                var ingeniero = objBusinessIngenieros.ObtenerIngeniero(ingenieroId);
+                response = Ok(ingeniero);
+            }
+            catch (ExceptionHelper ex)
             {
                 response = base.ErrorResponse(ex);
             }

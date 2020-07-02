@@ -19,22 +19,28 @@ namespace MyE.Presentation.WebApi.Controllers
     {
 
         private LoginBW objBusinessLogin = new LoginBW();
-
         [NonAction]
-        protected bool validateToken(UsuarioRes objUsuario, string tokenAvalidar)
+        protected bool? validateToken(UsuarioRes objUsuario, string tokenSesion)
         {
-            SecurityHelper.ValidateTimeToken(tokenAvalidar);
+            SecurityHelper.ValidateTimeToken(tokenSesion);
             return objBusinessLogin.validarTokenConBd(objUsuario);
         }
 
-        [NonAction]
-        protected UsuarioRes Login(LoginRequest model)
-        {
-            var res = objBusinessLogin.Loguearse(model.Username, model.Password);
-            HttpContext.Session.Set("USUARIO", ConvertHelper.ToByteArray(JsonConvert.SerializeObject(res)));
-            return res;
+        //[NonAction]
+        //protected UsuarioRes Login(LoginRequest model)
+        //{
+        //    bool persist = true;
+        //    var cookie = FormsAuthentication.GetAuthCookie("usuario", persist);
 
-        }
+        //    cookie.Name = FormsAuthentication.FormsCookieName;
+        //    cookie.Expires = DateTime.Now.AddMonths(3);
+
+        //    var ticket = FormsAuthentication.Decrypt(cookie.Value);
+        //    var newTicket = new FormsAuthenticationTicket(ticket.Version, ticket.Name, ticket.IssueDate, ticket.Expiration, ticket.IsPersistent, id);
+
+        //    cookie.Value = FormsAuthentication.Encrypt(newTicket);
+        //    HttpContext.Current.Response.Cookies.Add(cookie);
+        //}
 
         [NonAction]
         protected bool IsAuthorized()
@@ -65,25 +71,30 @@ namespace MyE.Presentation.WebApi.Controllers
         [NonAction]
         protected void ValidarModelo(object model)
         {
-            if (model == null)
-                throw new Exception("No se ha enviado ningún dato.");
+            try {
+                if (model == null)
+                    throw new Exception("No se ha enviado ningún dato.");
 
-            if (!ModelState.IsValid)
-            {
-                var result = new List<string>();
+                if (!ModelState.IsValid)
+                {
+                    var result = new List<string>();
 
-                var errorMessages = ModelState.Values.Select(x => x.Errors.Select(y => new { y.ErrorMessage }));
+                    var errorMessages = ModelState.Values.Select(x => x.Errors.Select(y => new { y.ErrorMessage }));
 
-                foreach (var x in errorMessages)
-                    foreach (var y in x)
-                        result.Add(y.ErrorMessage ?? "");
+                    foreach (var x in errorMessages)
+                        foreach (var y in x)
+                            result.Add(y.ErrorMessage ?? "");
 
-                result.RemoveAll(string.IsNullOrEmpty);
+                    result.RemoveAll(string.IsNullOrEmpty);
 
-                var message = (result.Count > 1 ? "-" : "") + string.Join("\n-", result.ToArray());
+                    var message = (result.Count > 1 ? "-" : "") + string.Join("\n-", result.ToArray());
 
-                throw new Exception(message);
+                    throw new Exception(message);
+                }
+            } catch (Exception ex) {
+                
             }
+            
         }
 
         [NonAction]
@@ -93,10 +104,16 @@ namespace MyE.Presentation.WebApi.Controllers
         }
 
         [NonAction]
-        protected IActionResult ErrorResponse(Exception ex)
+        protected IActionResult ErrorResponse(ExceptionHelper ex)
         {
-            var message = ex.Message;
-            return BadRequest(new { message });
+            if (ex is null)
+            {
+                var standarError = new ExceptionHelper();
+                return standarError.contentRespuesta;
+            }
+            else { 
+                return ex.contentRespuesta;
+            }
         }
 
         [NonAction]

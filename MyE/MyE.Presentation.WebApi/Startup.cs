@@ -71,8 +71,17 @@ namespace MyE.Presentation.WebApi
             //        Encoding.UTF8.GetBytes(Configuration["JWT_SECRET"])),
             //         ClockSkew = TimeSpan.Zero
             //     });
-
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                    builder.SetIsOriginAllowed(_ => true)
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
             services.AddMvc();  //...................................PARA LA SESION
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+        
         }
     
 
@@ -84,6 +93,7 @@ namespace MyE.Presentation.WebApi
             }
 
             app.UseHttpsRedirection();
+            app.UseCors();
 
             app.UseRouting();
 

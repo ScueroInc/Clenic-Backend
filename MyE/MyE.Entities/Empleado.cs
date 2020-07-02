@@ -7,6 +7,7 @@ namespace MyE.Entities
     {
         public Empleado()
         {
+            InverseJefe = new HashSet<Empleado>();
             Orden = new HashSet<Orden>();
         }
 
@@ -17,8 +18,11 @@ namespace MyE.Entities
         public string Correo { get; set; }
         public decimal? CordX { get; set; }
         public decimal? CordY { get; set; }
+        public int? JefeId { get; set; }
 
         public virtual Persona EmpleadoNavigation { get; set; }
+        public virtual Empleado Jefe { get; set; }
+        public virtual ICollection<Empleado> InverseJefe { get; set; }
         public virtual ICollection<Orden> Orden { get; set; }
     }
 }

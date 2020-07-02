@@ -23,18 +23,39 @@ namespace MyE.Presentation.WebApi.Controllers
         [HttpPost]
         [Route("login")]
         public IActionResult Loguearse([FromBody] LoginRequest model)
-        {
-            var response = default(IActionResult);                
-                try
-                {
-                var res = base.Login(model);
-                response = Ok(res);
-                }
-                catch (Exception ex)
-                {
-                    response = base.ErrorResponse(ex);
-                }
+        {            
+            var response = default(IActionResult);
+            try
+            {
+                base.ValidarModelo(model);
+                var UsuarioRes = objBusiness.Loguearse(model.Username, model.Password);
+                if (UsuarioRes == null) throw new ExceptionHelper(401,"¡Autenticacion fallida!");
+                HttpContext.Session.Set("USUARIO", ConvertHelper.ToByteArray(JsonConvert.SerializeObject(UsuarioRes)));
+            
+                response = Ok(UsuarioRes);
+            }
+            catch (ExceptionHelper ex)
+            {                
+                response = base.ErrorResponse(ex); 
+            }
                 return response;
+        }
+
+        [HttpDelete]
+        [Route("cerrarsesion")]
+        public IActionResult CerrarSesion()
+        {
+            var response = default(IActionResult);
+            try
+            {
+                HttpContext.Session.Clear();             
+                response = Ok();
+            }
+            catch 
+            {
+                response = base.ErrorResponse(new ExceptionHelper(400,"Error inesperado al cerrar sesion"));
+            }
+            return response;
         }
 
 

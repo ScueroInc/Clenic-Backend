@@ -20,29 +20,37 @@ namespace MyE.Business.Workflow
             context = new SqlContext();
         }
 
-        public List<OrdenesIngenieroRes> ListarOrdenesDeIngeniero(int id) {
+        public List<OrdenesIngenieroRes> ListarOrdenesDeIngeniero(UsuarioRes objUsuario) {
             var response = default(List<OrdenesIngenieroRes>);
             try
             {
                 var Ordenes = context.Orden
                                     .Include(e => e.LugarPersonas)
                                     .ThenInclude(e => e.Lugar)
-                                    .Include(e => e.Empleado)                                    
+                                    .Include(e => e.Empleado)
                                     .Include(e => e.LugarPersonas.Cliente)
                                     .ThenInclude(e => e.ClienteNavigation)
-                                    .Where(e => e.EmpleadoId== id)
-                                    .ToList();
-                                    
-                if (Ordenes is null) throw new ExceptionHelper("No se encontraron Ordenes"); 
-                response =Ordenes.Select(e => new OrdenesIngenieroRes(e)).ToList();
+                                    .AsQueryable();
+                if (objUsuario.Perfil == "S")
+                {
+                    var subditos = context.Empleado.Where(e => e.JefeId == objUsuario.PersonaId)
+                                                    .Select(e => e.EmpleadoId)
+                                                    .ToList();
+                    Ordenes = Ordenes.Where(e => subditos.Contains(e.EmpleadoId) || e.EmpleadoId == objUsuario.PersonaId);
+                }
+                else if (objUsuario.Perfil == "I") {
+                    Ordenes = Ordenes.Where(e => e.EmpleadoId == objUsuario.PersonaId);
+                }
+
+                    response =Ordenes.Select(e => new OrdenesIngenieroRes(e)).ToList();
             }
-            catch (Exception ex){
-                throw ex;
+            catch {
+                response = null;
             }
             return response;
         }
-        public bool RegistrarOrden(OrdenRqst objOrden) {
-            bool respuesta;
+        public bool? RegistrarOrden(OrdenRqst objOrden) {
+            bool? respuesta;
             try
             {
                 Orden newOrden = new Orden
@@ -57,9 +65,9 @@ namespace MyE.Business.Workflow
                 context.SaveChanges();
                 respuesta = true;
             }
-            catch (Exception ex)
+            catch 
             {
-                throw ex;
+                respuesta = null;
             }
             return respuesta;
         } 

@@ -166,6 +166,11 @@ namespace MyE.Data
                     .HasForeignKey<Empleado>(d => d.EmpleadoId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("Empleado_Persona");
+
+                entity.HasOne(d => d.Jefe)
+                    .WithMany(p => p.InverseJefe)
+                    .HasForeignKey(d => d.JefeId)
+                    .HasConstraintName("Empleado_Empleado");
             });
 
             modelBuilder.Entity<Equipo>(entity =>

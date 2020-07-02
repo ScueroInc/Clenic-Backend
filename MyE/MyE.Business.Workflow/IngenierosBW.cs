@@ -15,22 +15,27 @@ namespace MyE.Business.Workflow
             context = new SqlContext();
         }
 
-        public List<IngenieroRes> ListarIngenieros() {
+        public List<IngenieroRes> ListarIngenieros(UsuarioRes objUsuario) {
             var response = default(List<IngenieroRes>);      
             try
-            {                
-                var ingenieros = context.Usuario
-                                        .Include(e=>e.Persona) 
-                                        .ThenInclude(e=>e.Empleado)
-                                        .Where(e=>e.Persona.Empleado !=null)
-                                        .Where(e=>e.Perfil=="I")
-                                        .Select(e=>new IngenieroRes(e.Persona))
-                                        .ToList();
-                if (ingenieros is null) throw new ExceptionHelper("No se encontraron ingenieros");
-                response = ingenieros;                  
+            {
+                var ingenieros = context.Persona
+                                       .Include(e => e.Empleado)
+                                       .AsQueryable();
+                if (objUsuario.Perfil == "A") {
+                    ingenieros = ingenieros.Where(e => e.Empleado.JefeId != default(int?));
+                }
+                else
+                {
+                    ingenieros = ingenieros.Where(e => e.Empleado.JefeId == objUsuario.PersonaId);
+                }
+
+                response = ingenieros
+                                .Select(e => new IngenieroRes(e))
+                                .ToList();
             }
-            catch (Exception ex){
-                throw ex;
+            catch {
+                response = null;
             }
             return response;
         }
@@ -45,7 +50,7 @@ namespace MyE.Business.Workflow
                                         .ThenInclude(e => e.Empleado)
                                         .SingleOrDefault(e => e.Persona.PersonaId == ingenieroId);
                 
-                if (ingeniero is null) throw new ExceptionHelper("No se encontro registros");
+                if (ingeniero is null) throw new Exception();
                 response = new IngenieroRes
                 {
                     Correo = ingeniero.Persona.Empleado.Correo,
@@ -56,13 +61,40 @@ namespace MyE.Business.Workflow
                     NumeroContacto = ingeniero.Persona.Empleado.NumContacto
                 };
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                response = null;
             }
             return response;
         }
 
+        public bool RegistrarIngeniero(int ingenieroId)
+        {
+            var response = default(bool);
+            try
+            {
+                var ingeniero = context.Usuario
+                                        .Include(e => e.Persona)
+                                        .ThenInclude(e => e.Empleado)
+                                        .SingleOrDefault(e => e.Persona.PersonaId == ingenieroId);
+
+                if (ingeniero is null) throw new Exception();
+                //response = new IngenieroRes
+                //{
+                //    Correo = ingeniero.Persona.Empleado.Correo,
+                //    Direccion = ingeniero.Persona.Empleado.Tdireccion,
+                //    Dni = ingeniero.Persona.Empleado.Dni,
+                //    IngenieroId = ingeniero.Persona.Empleado.EmpleadoId,
+                //    Nombre = ingeniero.Persona.Npersona,
+                //    NumeroContacto = ingeniero.Persona.Empleado.NumContacto
+                //};
+            }
+            catch
+            {
+                response = false;
+            }
+            return response;
+        }
 
 
     }

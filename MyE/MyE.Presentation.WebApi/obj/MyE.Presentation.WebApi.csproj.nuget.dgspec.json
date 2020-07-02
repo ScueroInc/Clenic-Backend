@@ -30,6 +30,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
+                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj"
+              },
               "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
                 "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
               }
@@ -52,6 +55,10 @@
             "JWT": {
               "target": "Package",
               "version": "[6.1.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
@@ -103,9 +110,6 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
-                "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
-              },
               "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
                 "projectPath": "D:\\REPOSITORIOS DE GITHUB\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
               }

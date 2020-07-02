@@ -308,7 +308,6 @@ D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\bin\Debug\n
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\bin\Debug\netcoreapp3.1\MyE.Data.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\bin\Debug\netcoreapp3.1\MyE.Entities.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.csproj.CoreCompileInputs.cache
-D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.MvcApplicationPartsAssemblyInfo.cs
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.Views.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.csproj.CopyComplete
@@ -317,3 +316,4 @@ D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\n
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.dll
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.genruntimeconfig.cache
+D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Presentation.WebApi\obj\Debug\netcoreapp3.1\MyE.Presentation.WebApi.MvcApplicationPartsAssemblyInfo.cs

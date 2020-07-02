@@ -7,10 +7,12 @@
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.23" />
     <PackageReference Include="JWT" Version="6.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyE.Business.Entities\MyE.Business.Entities.csproj" />
     <ProjectReference Include="..\MyE.Entities\MyE.Entities.csproj" />
   </ItemGroup>
 

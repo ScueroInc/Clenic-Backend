@@ -41,10 +41,8 @@ D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\net
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Business.Entities.runtimeconfig.dev.json
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Business.Entities.dll
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Business.Entities.pdb
-D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Business.Component.dll
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Data.dll
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Entities.dll
-D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Business.Component.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Data.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\bin\Debug\netcoreapp3.1\MyE.Entities.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Entities\obj\Debug\netcoreapp3.1\MyE.Business.Entities.csprojAssemblyReference.cache

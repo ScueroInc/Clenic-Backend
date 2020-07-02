@@ -27,34 +27,18 @@ namespace MyE.Presentation.WebApi.Controllers
         public IActionResult ListarOrdenes() {
             var response = default(IActionResult);
             try
-            {                
-                SqlContext context = new SqlContext();
+            {
                 var objUsuario = base.GetUsuario();
-                //var _objUsuario = context.Usuario
-                //                        .Include(e=>e.Persona)
-                //                        .Single(e=>e.UsuarioId=="gonzaloescudero");
-                //var objUsuario = new UsuarioRes {
-                //    Nombre = _objUsuario.Persona.Npersona,
-                //    Perfil=_objUsuario.Perfil,
-                //    PersonaId=_objUsuario.PersonaId,
-                //    SessionToken=_objUsuario.Token,
-                //    UsuarioId=_objUsuario.UsuarioId
-                //};
-                if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
-                // var tokenAvalidar = objUsuario.SessionToken;
-                var tokenAvalidar = objUsuario.SessionToken;
-                var res = base.validateToken(objUsuario, tokenAvalidar);
+                if (objUsuario is null) throw new ExceptionHelper(401, "No se a iniciado sesion");               
+                var tokenSesion = objUsuario.SessionToken;
 
-                if (res)
-                {
-                    var listaOrdenes = objBusinessOrdenes.ListarOrdenesDeIngeniero(objUsuario.PersonaId);
-                    response = Ok(listaOrdenes);
-                }
-                else {
-                    throw new ExceptionHelper("HACKER");
-                }                
+                var res = base.validateToken(objUsuario, tokenSesion);
+                if (res is null) throw new ExceptionHelper(401, "Token inválido");
+                                               
+                var listaOrdenes = objBusinessOrdenes.ListarOrdenesDeIngeniero(objUsuario);
+                response = Ok(listaOrdenes);                         
             }
-            catch (Exception ex){
+            catch (ExceptionHelper ex){
                 response = base.ErrorResponse(ex);
             }
             return response;
@@ -67,22 +51,17 @@ namespace MyE.Presentation.WebApi.Controllers
             var response = default(IActionResult);
             try
             {
-                base.ValidarModelo(newOrden);
                 var objUsuario = base.GetUsuario();
-                if (objUsuario is null) throw new ExceptionHelper("No se a iniciado sesion");
-                var tokenAvalidar = objUsuario.SessionToken;
-                var res = base.validateToken(objUsuario, tokenAvalidar);
-                if (res)
-                {
-                    var respuesta = objBusinessOrdenes.RegistrarOrden(newOrden);
-                    response = Ok();
-                }
-                else
-                {
-                    throw new ExceptionHelper("HACKER");
-                }
+                if (objUsuario is null) throw new ExceptionHelper(401, "No se a iniciado sesion");
+                var tokenSesion = objUsuario.SessionToken;
+
+                var res = base.validateToken(objUsuario, tokenSesion);
+                if (res is null) throw new ExceptionHelper(401, "Token inválido");
+            
+                var respuesta = objBusinessOrdenes.RegistrarOrden(newOrden);
+                response = Ok();           
             }
-            catch (Exception ex)
+            catch (ExceptionHelper ex)
             {
                 response = base.ErrorResponse(ex);
             }
