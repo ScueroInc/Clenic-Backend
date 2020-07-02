@@ -86,14 +86,16 @@ namespace MyE.Presentation.WebApi
     
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {            
+        {
+            app.UseCors();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
             app.UseHttpsRedirection();
-            app.UseCors();
+            
 
             app.UseRouting();
 
@@ -109,7 +111,8 @@ namespace MyE.Presentation.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Babel Api V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Clenic Api V1");
+                c.RoutePrefix = string.Empty;
             });
 
 
