@@ -44,7 +44,7 @@ namespace MyE.Presentation.WebApi.Controllers
             {
                 var objUsuario = base.GetUsuario();
                 if (objUsuario is null) throw new ExceptionHelper(401,"No se a iniciado sesion");
-                if (!(objUsuario.Perfil == "A" || objUsuario.Perfil == "S")) throw new ExceptionHelper(401, "No tiene los permisos para acceder");
+                //if (!(objUsuario.Perfil == "A" || objUsuario.Perfil == "S")) throw new ExceptionHelper(401, "No tiene los permisos para acceder");
                 var tokenSesion = objUsuario.SessionToken;   
                 var res = base.validateToken(objUsuario, tokenSesion);
                 if (res is null) throw new ExceptionHelper(401,"Token inválido");
