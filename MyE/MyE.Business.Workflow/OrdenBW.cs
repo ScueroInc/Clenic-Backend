@@ -84,7 +84,7 @@ namespace MyE.Business.Workflow
                     Precio=precioServicio==null?0:precioServicio.Precio,
                     ServicioId=objOrden.servicioId,
                 };
-
+                context.OrdenServicio.Add(newOrdenService);
                 context.SaveChanges();
                 respuesta = true;
             }
