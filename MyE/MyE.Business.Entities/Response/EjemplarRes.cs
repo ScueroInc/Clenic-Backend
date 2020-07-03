@@ -14,13 +14,19 @@ namespace MyE.Business.Entities.Response
         [JsonProperty(PropertyName = "numeroSerieEjemplar")]
         public int numeroSerieEjemplar { get; set; }
 
-        public EquipoRes Equipo { get; set; }
+
+        [Display(Name = "nombreModelo")]
+        [JsonProperty(PropertyName = "nombreModelo")]
+        public string nombreModelo{ get; set; }
+
+        //public EquipoRes Equipo { get; set; }
 
         public EjemplarRes(Ejemplar objEjemplar, bool isLogin = false)
         {
             this.ejemplarId = objEjemplar.EjemplarId;
             this.numeroSerieEjemplar = objEjemplar.NumSerie;
-            this.Equipo = new EquipoRes(objEjemplar.Equipo);
+            //this.Equipo = new EquipoRes(objEjemplar.Equipo);
+            this.nombreModelo = objEjemplar.Equipo.Modelo.Nmodelo;
         }
         public EjemplarRes() { }
     }

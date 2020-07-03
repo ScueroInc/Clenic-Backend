@@ -24,9 +24,9 @@ namespace MyE.Business.Entities.Response
         public int empleadoId{ get; set; }
 
         [Required]
-        [Display(Name = "equipoId")]
-        [JsonProperty(PropertyName = "equipoId")]
-        public int equipoId { get; set; }
+        [Display(Name = "ejemplarId")]
+        [JsonProperty(PropertyName = "ejemplarId")]
+        public int ejemplarId { get; set; }
 
 
 

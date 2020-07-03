@@ -63,6 +63,20 @@ namespace MyE.Business.Workflow
                     FechaGeneracion=DateTime.Now
                 };
                 context.Orden.Add(newOrden);
+                OrdenDetalle newOrdenDetalle = new OrdenDetalle {
+                    Orden = newOrden,
+                    EjemplarId=objOrden.ejemplarId,
+                    Estado="Pendiente",                    
+                };
+                context.OrdenDetalle.Add(newOrdenDetalle);
+
+                OrdenServicio newOrdenService = new OrdenServicio
+                {
+                    OrdenDetalle= newOrdenDetalle,
+                    Precio=100,
+                    ServicioId=1,
+                };
+
                 context.SaveChanges();
                 respuesta = true;
             }
