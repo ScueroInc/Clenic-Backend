@@ -29,7 +29,7 @@ namespace MyE.Business.Entities.Response
 
         public LugarClienteRes(LugarCliente objLugarPersona)
         {
-            this.lugarClienteId = objLugarPersona.ClienteId;
+            this.lugarClienteId = objLugarPersona.LugarClienteId;
             this.lugarReferencia= objLugarPersona.Lugar.LugarReferencia;
             this.nombreCliente = objLugarPersona.Cliente.ClienteNavigation.Npersona;
             this.nombreSede = objLugarPersona.NombreSede;
