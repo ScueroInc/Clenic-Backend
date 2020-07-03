@@ -24,7 +24,14 @@ namespace MyE.Business.Workflow
             var response = default(List<OrdenesIngenieroRes>);
             try
             {
-                var Ordenes = context.Orden
+                var Ordenes = context.Orden     
+                                    .Include(e=>e.Empleado)
+                                    .ThenInclude(e=>e.EmpleadoNavigation)
+                                    .Include(e=>e.OrdenDetalle)
+                                    .ThenInclude(e=>e.OrdenServicio)
+                                    .ThenInclude(e=>e.Servicio)
+                                    .Include(e => e.OrdenDetalle)
+                                    .ThenInclude(e=>e.Ejemplar)
                                     .Include(e => e.LugarPersonas)
                                     .ThenInclude(e => e.Lugar)
                                     .Include(e => e.Empleado)
@@ -58,7 +65,7 @@ namespace MyE.Business.Workflow
                 {
                     EmpleadoId=objOrden.empleadoId,
                     LugarPersonasId=objOrden.lugar_PersonaId,
-                    Estado="P",
+                    Estado="Pendiente",
                     //FechaEjecucion=objOrden.FechaEjecucion,
                     FechaGeneracion=DateTime.Now
                 };
@@ -70,11 +77,12 @@ namespace MyE.Business.Workflow
                 };
                 context.OrdenDetalle.Add(newOrdenDetalle);
 
+                var precioServicio = context.Servicio.FirstOrDefault(e=>e.ServicioId==objOrden.servicioId);
                 OrdenServicio newOrdenService = new OrdenServicio
                 {
                     OrdenDetalle= newOrdenDetalle,
-                    Precio=100,
-                    ServicioId=1,
+                    Precio=precioServicio==null?0:precioServicio.Precio,
+                    ServicioId=objOrden.servicioId,
                 };
 
                 context.SaveChanges();

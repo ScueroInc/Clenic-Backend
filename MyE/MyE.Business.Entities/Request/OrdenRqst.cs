@@ -28,7 +28,10 @@ namespace MyE.Business.Entities.Response
         [JsonProperty(PropertyName = "ejemplarId")]
         public int ejemplarId { get; set; }
 
-
+        [Required]
+        [Display(Name = "servicioId")]
+        [JsonProperty(PropertyName = "servicioId")]
+        public int servicioId { get; set; }
 
     }
 }

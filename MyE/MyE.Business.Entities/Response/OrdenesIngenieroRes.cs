@@ -11,6 +11,18 @@ namespace MyE.Business.Entities.Response
         [JsonProperty(PropertyName = "id_orden")]
         public int OrdenId { get; set; }
 
+        [Display(Name = "nombreIngeniero")]
+        [JsonProperty(PropertyName = "nombreIngeniero")]
+        public string nombreIngeniero { get; set; }
+
+        [Display(Name = "seriesEjemplar")]
+        [JsonProperty(PropertyName = "seriesEjemplar")]
+        public string seriesEjemplar { get; set; }
+
+        [Display(Name = "serviciosNombre")]
+        [JsonProperty(PropertyName = "serviciosNombre")]
+        public string serviciosNombre { get; set; }
+
         [Display(Name = "fechaGeneracion")]
         [JsonProperty(PropertyName = "fechaGeneracion")]
         public DateTime? FechaGeneracion { get; set; }
@@ -46,6 +58,7 @@ namespace MyE.Business.Entities.Response
 
         public OrdenesIngenieroRes(Orden objOrden)
         {
+            this.nombreIngeniero = objOrden.Empleado.EmpleadoNavigation.Npersona;
             this.CorreoCliente= objOrden.LugarPersonas.Correo;
             this.DireccionLugar= objOrden.LugarPersonas.Lugar.Tdireccion;
             this.FechaEjecucion= objOrden.FechaEjecucion;
@@ -54,7 +67,17 @@ namespace MyE.Business.Entities.Response
             this.Lugar_PersonasId= objOrden.LugarPersonasId;
             this.NombreCliente= objOrden.LugarPersonas.Cliente.ClienteNavigation.Npersona;
             this.ClienteId = objOrden.LugarPersonas.Cliente.ClienteId;
-            this.OrdenId= objOrden.OrdenId;           
+            this.OrdenId= objOrden.OrdenId;
+            this.serviciosNombre = "";
+            this.seriesEjemplar = "";
+            foreach (var elem in objOrden.OrdenDetalle) {
+                this.seriesEjemplar += elem.Ejemplar.NumSerie;
+                foreach (var elem2 in elem.OrdenServicio)
+                {
+                    this.serviciosNombre += elem2.Servicio.Nservicio;
+                }
+            }
+            
         }
         public OrdenesIngenieroRes() { }
     }
