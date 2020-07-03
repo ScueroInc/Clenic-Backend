@@ -39,10 +39,6 @@ namespace MyE.Business.Entities.Response
         [JsonProperty(PropertyName = "cordY")]
         public decimal? cordY { get; set; }
 
-
-
-
-
         public IngenieroRes(Persona objIngeniero)
         {
             this.IngenieroId = objIngeniero.Empleado.EmpleadoId;
