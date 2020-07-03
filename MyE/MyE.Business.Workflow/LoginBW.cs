@@ -25,6 +25,7 @@ namespace MyE.Business.Workflow
                 var usuario = context.Usuario
                                      .Include(e => e.Persona)
                                      .ThenInclude(e => e.Empleado)
+                                     .Where(e=>e.UsuarioId==username && e.Psw==psw)
                                      .SingleOrDefault(x => x.UsuarioId == username);
                 if (usuario is null) throw new Exception();
                 usuario.Token = SecurityHelper.GenerateToken(usuario);

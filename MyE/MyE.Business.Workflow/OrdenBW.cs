@@ -55,11 +55,11 @@ namespace MyE.Business.Workflow
             {
                 Orden newOrden = new Orden
                 {
-                    EmpleadoId=objOrden.EmpleadoId,
-                    LugarPersonasId=objOrden.Lugar_PersonaId,
-                    Estado=objOrden.Estado,
-                    FechaEjecucion=objOrden.FechaEjecucion,
-                    FechaGeneracion=objOrden.FechaGeneracion 
+                    EmpleadoId=objOrden.empleadoId,
+                    LugarPersonasId=objOrden.lugar_PersonaId,
+                    Estado="P",
+                    //FechaEjecucion=objOrden.FechaEjecucion,
+                    FechaGeneracion=DateTime.Now
                 };
                 context.Orden.Add(newOrden);
                 context.SaveChanges();
