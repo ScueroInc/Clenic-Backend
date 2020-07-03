@@ -22,7 +22,7 @@ namespace MyE.Presentation.WebApi.Controllers
         [NonAction]
         protected bool? validateToken(UsuarioRes objUsuario, string tokenSesion)
         {
-            SecurityHelper.ValidateTimeToken(tokenSesion);
+            //SecurityHelper.ValidateTimeToken(tokenSesion);
             return objBusinessLogin.validarTokenConBd(objUsuario);
         }
 
