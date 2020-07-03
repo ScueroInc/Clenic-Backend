@@ -12,9 +12,9 @@ namespace MyE.Entities
 
         public int ModeloId { get; set; }
         public string Nmodelo { get; set; }
-        public int EquipoId { get; set; }
+        public int FabricanteId { get; set; }
 
-        public virtual Fabricante EquipoNavigation { get; set; }
+        public virtual Fabricante Fabricante { get; set; }
         public virtual ICollection<Equipo> Equipo { get; set; }
     }
 }

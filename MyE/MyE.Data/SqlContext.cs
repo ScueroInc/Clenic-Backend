@@ -50,7 +50,7 @@ namespace MyE.Data
             {
                 entity.ToTable("cliente");
 
-                entity.Property(e => e.ClienteId).ValueGeneratedOnAdd();
+                entity.Property(e => e.ClienteId).ValueGeneratedNever();
 
                 entity.Property(e => e.Nsector)
                     .IsRequired()
@@ -264,15 +264,17 @@ namespace MyE.Data
             {
                 entity.ToTable("modelo");
 
+                entity.Property(e => e.FabricanteId).HasColumnName("fabricanteId");
+
                 entity.Property(e => e.Nmodelo)
                     .IsRequired()
                     .HasColumnName("NModelo")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.EquipoNavigation)
+                entity.HasOne(d => d.Fabricante)
                     .WithMany(p => p.Modelo)
-                    .HasForeignKey(d => d.EquipoId)
+                    .HasForeignKey(d => d.FabricanteId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("Modelo_Marca");
             });
