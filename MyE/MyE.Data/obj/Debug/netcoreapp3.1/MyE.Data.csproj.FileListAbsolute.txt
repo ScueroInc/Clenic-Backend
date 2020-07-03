@@ -43,6 +43,7 @@ D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\My
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.dll
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.genruntimeconfig.cache
+<<<<<<< Updated upstream
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Data.deps.json
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Data.runtimeconfig.json
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Data.runtimeconfig.dev.json
@@ -58,3 +59,20 @@ D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Data\obj\Debug\netc
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.dll
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.pdb
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.genruntimeconfig.cache
+=======
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Data.deps.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Data.runtimeconfig.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Data.runtimeconfig.dev.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Data.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Data.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Entities.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Debug\netcoreapp3.1\MyE.Entities.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.csprojAssemblyReference.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.AssemblyInfoInputs.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.AssemblyInfo.cs
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.csproj.CoreCompileInputs.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.csproj.CopyComplete
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Debug\netcoreapp3.1\MyE.Data.genruntimeconfig.cache
+>>>>>>> Stashed changes

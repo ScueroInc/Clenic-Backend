@@ -61,6 +61,7 @@ D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\net
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.dll
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.pdb
 D:\REPOSITORIOS DE GITHUB\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.genruntimeconfig.cache
+<<<<<<< Updated upstream
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Workflow.deps.json
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Workflow.runtimeconfig.json
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Workflow.runtimeconfig.dev.json
@@ -82,3 +83,26 @@ D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Workflow\o
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.dll
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.pdb
 D:\Escritorio\Moviles\Trabajo\backend\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.genruntimeconfig.cache
+=======
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Workflow.deps.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Workflow.runtimeconfig.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Workflow.runtimeconfig.dev.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Workflow.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Workflow.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Component.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Entities.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Data.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Entities.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Component.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Business.Entities.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Data.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\bin\Debug\netcoreapp3.1\MyE.Entities.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.csprojAssemblyReference.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.AssemblyInfoInputs.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.AssemblyInfo.cs
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.csproj.CoreCompileInputs.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.csproj.CopyComplete
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Business.Workflow\obj\Debug\netcoreapp3.1\MyE.Business.Workflow.genruntimeconfig.cache
+>>>>>>> Stashed changes
