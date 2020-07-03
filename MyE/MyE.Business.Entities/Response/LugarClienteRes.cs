@@ -33,7 +33,9 @@ namespace MyE.Business.Entities.Response
             this.lugarReferencia= objLugarPersona.Lugar.LugarReferencia;
             this.nombreCliente = objLugarPersona.Cliente.ClienteNavigation.Npersona;
             this.nombreSede = objLugarPersona.NombreSede;
-            this.numContacto = objLugarPersona.NumContacto;            
+            this.numContacto = objLugarPersona.NumContacto;
+            this.direccion = objLugarPersona.Lugar.Tdireccion;
+            this.ubigeo = objLugarPersona.Lugar.Ubigeo;
             this.cordX = objLugarPersona.CordX;
             this.cordY = objLugarPersona.CordY;
         }

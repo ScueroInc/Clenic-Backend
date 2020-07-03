@@ -30,6 +30,10 @@ namespace MyE.Business.Entities.Response
         [JsonProperty(PropertyName = "personaId")]
         public int PersonaId { get; set; }
 
+        public string correo { get; set; }
+
+        public string NumContacto{ get; set; }
+
         //[Display(Name = "dni")]
         //[JsonProperty(PropertyName = "dni")]
         //public string Dni { get; set; }
@@ -53,9 +57,8 @@ namespace MyE.Business.Entities.Response
             this.PersonaId= usuario.PersonaId;           
             this.SessionToken = isLogin ? usuario.Token : "";
             this.Perfil = usuario.Perfil;
-            //this.Dni= usuario.Persona.Empleado.Dni;
-            //this.NumContacto = usuario.Persona.Empleado.NumContacto;
-            //this.Tdireccion = usuario.Persona.Empleado.Tdireccion;
+            this.correo = usuario.Persona.Empleado.Correo;
+            this.NumContacto = usuario.Persona.Empleado.NumContacto.ToString();            
         }
         public UsuarioRes() { }
     }
