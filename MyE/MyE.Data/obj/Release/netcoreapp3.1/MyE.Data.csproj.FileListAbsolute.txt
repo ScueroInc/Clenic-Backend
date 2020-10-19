@@ -1,0 +1,15 @@
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Release\netcoreapp3.1\MyE.Data.deps.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Release\netcoreapp3.1\MyE.Data.runtimeconfig.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Release\netcoreapp3.1\MyE.Data.runtimeconfig.dev.json
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Release\netcoreapp3.1\MyE.Data.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Release\netcoreapp3.1\MyE.Data.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Release\netcoreapp3.1\MyE.Entities.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\bin\Release\netcoreapp3.1\MyE.Entities.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Release\netcoreapp3.1\MyE.Data.csprojAssemblyReference.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Release\netcoreapp3.1\MyE.Data.AssemblyInfoInputs.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Release\netcoreapp3.1\MyE.Data.AssemblyInfo.cs
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Release\netcoreapp3.1\MyE.Data.csproj.CoreCompileInputs.cache
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Release\netcoreapp3.1\MyE.Data.csproj.CopyComplete
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Release\netcoreapp3.1\MyE.Data.dll
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Release\netcoreapp3.1\MyE.Data.pdb
+D:\Escritorio\Moviles\clenicback\Clenic-Backend\MyE\MyE.Data\obj\Release\netcoreapp3.1\MyE.Data.genruntimeconfig.cache
