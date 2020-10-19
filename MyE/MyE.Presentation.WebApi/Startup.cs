@@ -13,6 +13,8 @@ using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using MyE.Business.Component.Helpers;
 using System.Configuration;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace MyE.Presentation.WebApi
 {
@@ -55,7 +57,9 @@ namespace MyE.Presentation.WebApi
             });
 
             services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
+
             services.AddSession();
+            
             //...................................
             //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             //    .AddJwtBearer(options =>
@@ -81,7 +85,6 @@ namespace MyE.Presentation.WebApi
             });
             services.AddMvc();  //...................................PARA LA SESION
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-        
         }
     
 

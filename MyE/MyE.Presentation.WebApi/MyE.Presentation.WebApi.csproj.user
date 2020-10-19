@@ -4,12 +4,12 @@
     <NameOfLastUsedPublishProfile>FolderProfile</NameOfLastUsedPublishProfile>
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
     <GoogleCloudPublishChoice>Gce</GoogleCloudPublishChoice>
-    <GoogleComputeEnginePublishInstanceName>clenic-serverside-1</GoogleComputeEnginePublishInstanceName>
-    <GoogleComputeEnginePublishInstanceZone>us-central1-f</GoogleComputeEnginePublishInstanceZone>
-    <GoogleComputeEnginePublishInstanceUserName>gonzaloescuderop</GoogleComputeEnginePublishInstanceUserName>
     <GoogleComputeEnginePublishOpenWebsite>True</GoogleComputeEnginePublishOpenWebsite>
     <GoogleComputeEnginePublishLaunchRemoteDebugger>False</GoogleComputeEnginePublishLaunchRemoteDebugger>
     <GoogleComputeEnginePublishSiteName>Default Web Site</GoogleComputeEnginePublishSiteName>
+    <GoogleComputeEnginePublishInstanceName>clenic-serverside-1</GoogleComputeEnginePublishInstanceName>
+    <GoogleComputeEnginePublishInstanceZone>us-central1-f</GoogleComputeEnginePublishInstanceZone>
+    <GoogleComputeEnginePublishInstanceUserName>gonzaloescuderop</GoogleComputeEnginePublishInstanceUserName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
