@@ -7689,11 +7689,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
+      "projectUniqueName": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
       "projectName": "MyE.Business.Workflow",
-      "projectPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
+      "projectPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
       "packagesPath": "C:\\Users\\Scuero\\.nuget\\packages\\",
-      "outputPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\obj\\",
+      "outputPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7712,17 +7712,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
-              "projectPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
+            "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj": {
+              "projectPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Component\\MyE.Business.Component.csproj"
             },
-            "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
-              "projectPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj"
+            "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj": {
+              "projectPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj"
             },
-            "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
-              "projectPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
+            "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
+              "projectPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
             },
-            "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
-              "projectPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
+            "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj": {
+              "projectPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj"
             }
           }
         }

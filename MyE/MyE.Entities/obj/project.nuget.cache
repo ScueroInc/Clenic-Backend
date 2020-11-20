@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M1ryzJnwXHEG6bdjvL4UuTuViUj/29cPOdmKlXxvcIj59EE0qcM8m3Uu+xF4xxRj9RBDEWW1SwBFH6BRYRHxIQ==",
+  "dgSpecHash": "h/MnYm2CyiieuIRapyQHjxZQdtZkUD2HKMlVv3RlJgDESw0XFpce4HyDSar2kymRhL+4LD1EACWLxp7X7JsVew==",
   "success": true,
-  "projectFilePath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
+  "projectFilePath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Entities\\MyE.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

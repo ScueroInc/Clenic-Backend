@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
+      "projectUniqueName": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
       "projectName": "MyE.WebApplication",
-      "projectPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
+      "projectPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
       "packagesPath": "C:\\Users\\Scuero\\.nuget\\packages\\",
-      "outputPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.WebApplication\\obj\\",
+      "outputPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

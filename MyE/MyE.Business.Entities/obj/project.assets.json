@@ -5364,11 +5364,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
+      "projectUniqueName": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
       "projectName": "MyE.Business.Entities",
-      "projectPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
+      "projectPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
       "packagesPath": "C:\\Users\\Scuero\\.nuget\\packages\\",
-      "outputPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Entities\\obj\\",
+      "outputPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5387,8 +5387,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
-              "projectPath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
+            "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj": {
+              "projectPath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Data\\MyE.Data.csproj"
             }
           }
         }

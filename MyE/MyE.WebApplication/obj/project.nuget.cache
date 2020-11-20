@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6WPklKrermWHd71DywmqW/BwAHWf+J5uN8ue+qZKft+6VNPN81y/WLl4wB9v2V5lEjAs30laVe7UU1Q7Z4ZeDw==",
+  "dgSpecHash": "v0Vykgpwzn+s0mXU00I5CuOCS1u/LkxqbxMcwb/F8jyZz9XzSpVa53rx2C1bi5bnPbYO60YEnoO3pRth3XtBMQ==",
   "success": true,
-  "projectFilePath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
+  "projectFilePath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.WebApplication\\MyE.WebApplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

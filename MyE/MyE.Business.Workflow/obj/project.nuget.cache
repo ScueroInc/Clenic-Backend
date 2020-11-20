@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dZpRvWkaHSNuPF6A179Td2LmrprK3BuAnqHH5aDXp3LhZD2tPSQGdGQ4xMBk3qv9oNNNHeeXxAwQGlKzu5abYQ==",
+  "dgSpecHash": "Ifn2w5PGAU7PeNM20HYV/Xp71NOEqyk1ZGCDQ7K4bzDl8rLl8x/QtqYljUr+xBccGWFBJmX0dAicFM1UNy5lxQ==",
   "success": true,
-  "projectFilePath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
+  "projectFilePath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Workflow\\MyE.Business.Workflow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Scuero\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512",
     "C:\\Users\\Scuero\\.nuget\\packages\\htmlagilitypack\\1.11.23\\htmlagilitypack.1.11.23.nupkg.sha512",

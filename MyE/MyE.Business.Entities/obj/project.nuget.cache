@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zv8gu9FVT5iUbR1VYS6K81FD4H7HdnM8GBfj9php1jU5MTTV3+ybOoEFQ8lavoS0/3uBJtd4KoJklC8WYCoUsw==",
+  "dgSpecHash": "5JfGfdvKQ8jqz182hVmUXZRbpS8ITDIOmzyPwn055cxWjFD6ofHj3cqs0i0ScYxQceiIFEQ/wc+9tI3vyrFAGg==",
   "success": true,
-  "projectFilePath": "D:\\Escritorio\\Moviles\\clenicback\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
+  "projectFilePath": "D:\\Repositorios\\Clenic-Backend\\MyE\\MyE.Business.Entities\\MyE.Business.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Scuero\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512",
     "C:\\Users\\Scuero\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
