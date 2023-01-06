@@ -19,7 +19,7 @@
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.3.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.3.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.3.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />
     <PackageReference Include="X.PagedList.Mvc.Core" Version="8.0.7" />
   </ItemGroup>
 
